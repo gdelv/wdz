@@ -13,8 +13,10 @@ const InnerContainer = styled.View`
 `
 const Description = styled.Text`
   text-align: center;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 25px;
 `
 
 const ButtonContainer = styled.View`
@@ -30,6 +32,7 @@ const FacebookButton = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 `
 const FacebookIcon = styled.Image`
   height: 20.7px;

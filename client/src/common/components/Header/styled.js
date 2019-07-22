@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.View`
   background-color: ${props => props.theme.GREEN};
-  height: 50%;
+  height: 30%;
   max-height: 250px;
   display: flex;
   align-items: center;

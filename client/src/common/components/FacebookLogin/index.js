@@ -6,7 +6,7 @@ const FacebookLogin = (props) => {
   return (
     <Container>
       <InnerContainer>
-        <Description>
+        <Description adjustsFontSizeToFit numberOfLines={4}>
           {props.children}
         </Description>
         <ButtonContainer>

@@ -4,7 +4,7 @@ const ButtonContainer = styled.View`
   /* background-color: ${props => props.theme.WHITE}; */
   display: flex;
   flex: auto;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 const InnerButtonContainer = styled.View`

@@ -7,7 +7,7 @@ const Initial = () => {
   return (
     <View>
       <Header>
-        This is the header.
+        I am a...
       </Header>
     </View>
   )

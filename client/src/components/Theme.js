@@ -4,7 +4,10 @@ import { ThemeProvider } from 'styled-components'
 const theme = {
   GREEN: 'rgb(26, 236, 134)',
   BLACK: 'rgb(0, 0, 0)',
-  WHITE: 'rgb(255, 255, 255)'
+  WHITE: 'rgb(255, 255, 255)',
+  POPPINS_BOLD: 'Poppins-Bold',
+  POPPINS_LIGHT: 'Poppins-Light',
+  POPPINS_MEDIUM: 'Poppins-Medium'
 }
 
 const Theme = (props) => {

@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "ios": "react-native run-ios"
   },
   "dependencies": {
     "react": "16.8.6",
@@ -25,5 +24,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts/Poppins"
+    ]
   }
 }

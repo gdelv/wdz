@@ -1,9 +1,16 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.View`
-  background-color: grey;
+  background-color: ${props => props.theme.GREEN};
   height: 50%;
   min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-export { Wrapper }
+const Title = styled.Text`
+  font-family: ${props => props.theme.POPPINS_BOLD};
+`
+
+export { Wrapper, Title }

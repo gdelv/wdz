@@ -4,15 +4,11 @@ const ButtonWrapper = styled.View`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: papayawhip;
   flex: auto;
-  /* padding-bottom: 15%; */
-
 `
 const Button = styled.TouchableOpacity`
-  background-color: red;
   width: 107.1px;
-
+  margin-bottom: 15%
 `
 const ButtonText = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};

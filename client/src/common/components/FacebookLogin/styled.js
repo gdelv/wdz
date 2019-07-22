@@ -1,11 +1,26 @@
 import styled from 'styled-components'
 
 const Container = styled.View`
-  background-color: red;
+  height: 45%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
 `
-const Description = styled.Text``
+const InnerContainer = styled.View`
+  display: flex;
+  justify-content: space-evenly;
+  height: 40%;
+`
+const Description = styled.Text`
+  text-align: center;
+  font-size: 18px;
+  line-height: 27px;
+`
 
-const ButtonContainer = styled.View``
+const ButtonContainer = styled.View`
+  display: flex;
+  align-items: center;
+`
 const FacebookButton = styled.TouchableOpacity`
   height: 40px;
   width: 60%;
@@ -28,4 +43,4 @@ const ButtonText = styled.Text`
   padding-left: 10px;
 `
 
-export { Container, Description, ButtonContainer, FacebookButton, FacebookIcon, ButtonText }
+export { Container, InnerContainer, Description, ButtonContainer, FacebookButton, FacebookIcon, ButtonText }

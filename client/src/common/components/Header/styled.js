@@ -12,7 +12,7 @@ const Wrapper = styled.View`
 const Title = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
   font-size: 25px;
-  padding-top: 25%;
+  padding-top: 10%;
 `
 
 export { Wrapper, Title }

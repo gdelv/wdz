@@ -1,8 +1,7 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-
-import Header from '../common/Header'
-import { Wrapper, ButtonContainer, InnerButtonContainer, Button, ButtonText } from './styled'
+import Header from '../../common/components/Header'
+import { Wrapper } from '../../common/styled'
+import { ButtonContainer, InnerButtonContainer, Button, ButtonText } from './styled'
 
 const Initial = () => {
   return (

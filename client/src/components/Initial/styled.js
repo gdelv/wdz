@@ -1,10 +1,5 @@
 import styled from 'styled-components'
 
-const Wrapper = styled.View`
-  background-color: ${props => props.theme.GREEN};
-  height: 100%;
-`
-
 const ButtonContainer = styled.View`
   /* background-color: ${props => props.theme.WHITE}; */
   display: flex;
@@ -34,4 +29,4 @@ const ButtonText = styled.Text`
   color: #fff;
 `
 
-export { Wrapper, ButtonContainer, InnerButtonContainer, Button, ButtonText }
+export { ButtonContainer, InnerButtonContainer, Button, ButtonText }

@@ -8,7 +8,7 @@ const RouterComponent = () => {
   return (
     <Router>
       <Scene key="scene-wrapper">
-        <Scene key="initial" component={Initial}>
+        <Scene key="initial" component={Initial} hideNavBar>
         </Scene>
       </Scene>
     </Router>

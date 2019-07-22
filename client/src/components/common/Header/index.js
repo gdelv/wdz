@@ -5,7 +5,7 @@ import { Wrapper, Title } from './styled'
 const Header = (props) => {
   return (
     <Wrapper>
-      <Title>{props.children}</Title>
+      <Title >{props.children}</Title>
     </Wrapper>
   )
 }

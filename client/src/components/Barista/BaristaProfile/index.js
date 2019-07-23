@@ -1,9 +1,24 @@
 import React from 'react'
 import { TopBar } from '../../../common'
-import { Wrapper, PlusIcon, PhotoContainer, ProfilePhoto, PhotoRight, Shader, Name } from './styled'
 import plusIcon from '../../../assets/img/plus-icon.png'
 import baristaDev from '../../../assets/img/barista-dev.jpeg'
 import coffeePlaceholder from '../../../assets/img/coffee-placeholder.png'
+import {
+  Wrapper,
+  PlusIcon,
+  PhotoContainer,
+  ProfilePhoto,
+  PhotoRight,
+  Shader,
+  Name,
+  BottomContainer,
+  InnerContainer,
+  TopText,
+  MiddleText,
+  ButtonContainer,
+  Button,
+  ButtonText
+} from './styled'
 
 class BaristaProfile extends React.Component {
   renderPlusIcon = () => {
@@ -40,22 +55,17 @@ class BaristaProfile extends React.Component {
           </PhotoRight>
         </PhotoContainer>
 
-        {/*
-          Here I will add the photo section for
-          the barista profile.
-        */}
-
-
-        {/* 
-          Here there will be a Calendar picker
-          for the next 2 weeks. 
-        */}
-
-        {/*
-          Here there will be a default calendar to
-          add if the user has no calendars.
-        */}
-
+        <BottomContainer>
+          <InnerContainer>
+            <TopText>You're all set!</TopText>
+            <MiddleText>Let's create some schedule.</MiddleText>
+            <ButtonContainer>
+              <Button>
+                <ButtonText>ADD NEW</ButtonText>
+              </Button>
+            </ButtonContainer>
+          </InnerContainer>
+        </BottomContainer>
       </Wrapper>
     )
   }

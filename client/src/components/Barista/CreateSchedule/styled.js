@@ -16,10 +16,16 @@ const SaveText = styled.Text`
 const MainContainer = styled.View`
   height: 60%;
 `
-const SubContainer = styled.View`
+const ScheduleButton = styled.TouchableOpacity`
   height: 20%;
-  border-bottom-color: ${props => props.theme.GREY};
   border-bottom-width: 1px;
+  display: flex;
+  flex-direction: column;
+
+`
+const SubContainer = styled.View`
+  height: 100%;
+  border-bottom-color: ${props => props.theme.GREY};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,6 +44,7 @@ export {
   CancelText,
   SaveText,
   MainContainer,
+  ScheduleButton,
   SubContainer,
   InnerText
 }

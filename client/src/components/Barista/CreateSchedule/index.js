@@ -6,8 +6,9 @@ import {
   CancelText,
   SaveText,
   MainContainer,
+  ScheduleButton,
   SubContainer,
-  InnerText
+  InnerText,
 } from './styled'
 
 class CreateSchedule extends React.Component {
@@ -38,26 +39,36 @@ class CreateSchedule extends React.Component {
           RightSection={this.renderSaveButton()}
         />
         <MainContainer>
-          <SubContainer>
-            <InnerText>Date</InnerText>
-            <InnerText >Monday, March 28 2016</InnerText>
-          </SubContainer>
-          <SubContainer>
-            <InnerText>Start Time</InnerText>
-            <InnerText>7:00 AM</InnerText>
-          </SubContainer>
-          <SubContainer>
-            <InnerText>End Time</InnerText>
-            <InnerText>8:00 AM</InnerText>
-          </SubContainer>
-          <SubContainer>
-            <InnerText>Break Start</InnerText>
-            <InnerText>(optional)</InnerText>
-          </SubContainer>
-          <SubContainer>
-            <InnerText>Break End</InnerText>
-            <InnerText>(optional)</InnerText>
-          </SubContainer>
+          <ScheduleButton>
+            <SubContainer>
+              <InnerText>Date</InnerText>
+              <InnerText >Monday, March 28 2016</InnerText>
+            </SubContainer>
+          </ScheduleButton>
+          <ScheduleButton>
+            <SubContainer>
+              <InnerText>Start Time</InnerText>
+              <InnerText>7:00 AM</InnerText>
+            </SubContainer>
+          </ScheduleButton>
+          <ScheduleButton>
+            <SubContainer>
+              <InnerText>End Time</InnerText>
+              <InnerText>8:00 AM</InnerText>
+            </SubContainer>
+          </ScheduleButton>
+          <ScheduleButton>
+            <SubContainer>
+              <InnerText>Break Start</InnerText>
+              <InnerText>(optional)</InnerText>
+            </SubContainer>
+          </ScheduleButton>
+          <ScheduleButton>
+            <SubContainer>
+              <InnerText>Break End</InnerText>
+              <InnerText>(optional)</InnerText>
+            </SubContainer>
+          </ScheduleButton>
         </MainContainer>
       </Wrapper >
     )

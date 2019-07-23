@@ -1,5 +1,4 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 import { Wrapper, Title } from './styled'
 
 const Header = (props) => {
@@ -10,4 +9,4 @@ const Header = (props) => {
   )
 }
 
-export default Header
+export { Header }

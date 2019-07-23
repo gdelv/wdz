@@ -10,8 +10,6 @@ const theme = {
   POPPINS_MEDIUM: 'Poppins-Medium'
 }
 
-
-
 const Theme = (props) => {
   return (
     <ThemeProvider theme={theme}>

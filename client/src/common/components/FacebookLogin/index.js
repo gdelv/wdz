@@ -22,4 +22,4 @@ const FacebookLogin = (props) => {
   )
 }
 
-export default FacebookLogin
+export { FacebookLogin }

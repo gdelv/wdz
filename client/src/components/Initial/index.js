@@ -1,9 +1,12 @@
 import React from 'react'
-import Header from '../../common/components/Header'
+import { Actions } from 'react-native-router-flux'
+import { Header } from '../../common'
 import { Wrapper } from '../../common/styled'
 import { ButtonContainer, InnerButtonContainer, Button, ButtonText } from './styled'
 
 const Initial = () => {
+  navigateToCustomerLogin = () => Actions.CustomerLogin()
+  navigateToBaristaLogin = () => Actions.BaristaLogin()
   return (
     <Wrapper>
       <Header>
@@ -11,10 +14,10 @@ const Initial = () => {
       </Header>
       <ButtonContainer>
         <InnerButtonContainer>
-          <Button>
+          <Button onPress={navigateToCustomerLogin}>
             <ButtonText>Customer</ButtonText>
           </Button>
-          <Button>
+          <Button onPress={navigateToBaristaLogin}>
             <ButtonText>
               Barista
           </ButtonText>

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const ButtonContainer = styled.View`
-  /* background-color: ${props => props.theme.WHITE}; */
   display: flex;
   flex: auto;
   justify-content: flex-start;

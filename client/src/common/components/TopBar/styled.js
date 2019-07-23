@@ -23,18 +23,9 @@ const RightSection = styled.View`
   display: flex;
   align-items: flex-end;
 `
-const CancelText = styled.Text`
-  color: white;
-  font-family: ${props => props.theme.POPPINS_BOLD};
-  font-size: 15px;
-`
 const Title = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
   font-size: 20px;
-`
-const PlusIcon = styled.Image`
-  width: 20px;
-  height: 20px;
 `
 
 export {
@@ -42,7 +33,5 @@ export {
   LeftSection,
   MiddleSection,
   RightSection,
-  CancelText,
   Title,
-  PlusIcon
 }

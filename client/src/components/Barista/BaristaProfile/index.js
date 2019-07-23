@@ -1,8 +1,9 @@
 import React from 'react'
 import { TopBar } from '../../../common'
-import { Wrapper, PlusIcon, PhotoContainer, ProfilePhoto, PhotoRight } from './styled'
+import { Wrapper, PlusIcon, PhotoContainer, ProfilePhoto, PhotoRight, Shader } from './styled'
 import plusIcon from '../../../assets/img/plus-icon.png'
 import baristaDev from '../../../assets/img/barista-dev.jpeg'
+import coffeePlaceholder from '../../../assets/img/coffee-placeholder.png'
 
 class BaristaProfile extends React.Component {
   renderPlusIcon = () => {
@@ -32,6 +33,9 @@ class BaristaProfile extends React.Component {
 
         <PhotoContainer>
           <ProfilePhoto source={baristaDev} />
+          <PhotoRight source={coffeePlaceholder}>
+            <Shader />
+          </PhotoRight>
         </PhotoContainer>
 
         {/*

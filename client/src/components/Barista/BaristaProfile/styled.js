@@ -15,17 +15,28 @@ const PlusIcon = styled.Image`
 const PhotoContainer = styled.View`
   height: 30%;
   background-color: grey;
+  display: flex;
+  flex-direction: row;
 `
 const ProfilePhoto = styled.Image`
   height: 100%;
   width: 45%;
 `
-const PhotoRight = styled.Image``
+const PhotoRight = styled.ImageBackground`
+  height: 100%;
+  width: 100%;
+`
+const Shader = styled.View`
+  height: 100%;
+  width: 65%;
+  background-color: ${props => props.theme.SHADE};
+`
 export {
   Wrapper,
   PhotoContainer,
   ProfilePhoto,
   PhotoRight,
+  Shader,
   CancelText,
   PlusIcon
 }

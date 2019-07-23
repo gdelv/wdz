@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity, DatePickerIOS } from 'react-native'
 import { TopBar } from '../../../common'
 import {
   Wrapper,
@@ -12,23 +12,25 @@ import {
 } from './styled'
 
 class CreateSchedule extends React.Component {
-  renderCancelButton = () => {
-    return (
-      <TouchableOpacity>
-        <CancelText>
-          CANCEL
-        </CancelText>
-      </TouchableOpacity>
-    )
+  state = {
+    showDatePicker: false,
+    date: new Date()
   }
-  renderSaveButton = () => {
-    return (
-      <TouchableOpacity>
-        <SaveText>
-          SAVE
-        </SaveText>
-      </TouchableOpacity>
-    )
+  toggleDatePicker = () => {
+    if (!this.state.showDatePicker) {
+      this.setState({ showDatePicker: true })
+    }
+    if (this.state.showDatePicker) {
+      this.setState({ showDatePicker: false })
+    }
+  }
+  renderDatePicker = () => {
+    if (this.state.showDatePicker) {
+      return <DatePickerIOS date={this.state.date} />
+    }
+    if (!this.state.showDatePicker) {
+      return null
+    }
   }
   render() {
     return (
@@ -39,12 +41,14 @@ class CreateSchedule extends React.Component {
           RightSection={this.renderSaveButton()}
         />
         <MainContainer>
-          <ScheduleButton>
+          <ScheduleButton onPress={this.toggleDatePicker}>
             <SubContainer>
               <InnerText>Date</InnerText>
-              <InnerText >Monday, March 28 2016</InnerText>
+              <InnerText>Monday, March 28 2016</InnerText>
             </SubContainer>
           </ScheduleButton>
+          {/* <DatePickerIOS date={this.state.date} /> */}
+          {this.renderDatePicker()}
           <ScheduleButton>
             <SubContainer>
               <InnerText>Start Time</InnerText>
@@ -71,6 +75,24 @@ class CreateSchedule extends React.Component {
           </ScheduleButton>
         </MainContainer>
       </Wrapper >
+    )
+  }
+  renderCancelButton = () => {
+    return (
+      <TouchableOpacity>
+        <CancelText>
+          CANCEL
+        </CancelText>
+      </TouchableOpacity>
+    )
+  }
+  renderSaveButton = () => {
+    return (
+      <TouchableOpacity>
+        <SaveText>
+          SAVE
+        </SaveText>
+      </TouchableOpacity>
     )
   }
 }

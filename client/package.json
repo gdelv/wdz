@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "ios": "react-native run-ios"
+    "ios": "react-native run-ios",
+    "ios5": "react-native run-ios --simulator='iPhone SE'",
+    "ios7": "react-native run-ios --simulator='iPhone 7'",
+    "ios10": "react-native run-ios --simulator='iPhone Xs Max'"
   },
   "dependencies": {
     "react": "16.8.6",

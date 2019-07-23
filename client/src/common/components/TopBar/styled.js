@@ -4,7 +4,7 @@ const Wrapper = styled.View`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: white;
+  background-color: grey;
   height: 15%;
   max-height: 110px;
   align-items: center;
@@ -23,6 +23,11 @@ const RightSection = styled.View`
   display: flex;
   align-items: flex-end;
 `
+const CancelText = styled.Text`
+  color: white;
+  font-family: ${props => props.theme.POPPINS_BOLD};
+  font-size: 15px;
+`
 const Title = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
   font-size: 20px;
@@ -32,4 +37,12 @@ const PlusIcon = styled.Image`
   height: 20px;
 `
 
-export { Wrapper, LeftSection, MiddleSection, RightSection, Title, PlusIcon }
+export {
+  Wrapper,
+  LeftSection,
+  MiddleSection,
+  RightSection,
+  CancelText,
+  Title,
+  PlusIcon
+}

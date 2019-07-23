@@ -1,11 +1,12 @@
 import React from 'react'
-import { Text } from 'react-native'
-import { Wrapper, LeftSection, MiddleSection, RightSection, Title, PlusIcon } from './styled'
+import { TouchableOpacity } from 'react-native'
+import { Wrapper, LeftSection, MiddleSection, RightSection, CancelText, Title, PlusIcon } from './styled'
 import plusIcon from '../../../assets/img/plus-icon.png'
 
 class TopBar extends React.Component {
   state = {
-    showPlusIcon: true
+    showPlusIcon: false,
+    showCancelButton: false
   }
   renderPlusIcon = () => {
     if (this.state.showPlusIcon) {
@@ -16,11 +17,22 @@ class TopBar extends React.Component {
       )
     }
   }
+  renderCancelButton = () => {
+    if (this.state.showCancelButton) {
+      return (
+        <TouchableOpacity>
+          <CancelText>
+            {this.props.CancelText}
+          </CancelText>
+        </TouchableOpacity>
+      )
+    }
+  }
   render() {
     return (
       <Wrapper>
         <LeftSection>
-          <Text>LEFT</Text>
+          {this.props.LeftSection}
         </LeftSection>
         <MiddleSection>
           <Title
@@ -31,18 +43,11 @@ class TopBar extends React.Component {
           </Title>
         </MiddleSection>
         <RightSection>
-          {this.renderPlusIcon()}
+          {this.props.RightSection}
         </RightSection>
       </Wrapper>
     )
   }
 }
-
-// conditional rendering.
-// i want to pass the plusicon as a boolean through.
-// if the showplusicon is true i would show it
-// but if it's false than i would hide the plusicon
-
-// I can pass a prop down as 'this.props.isPlusIcon'
 
 export { TopBar }

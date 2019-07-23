@@ -6,6 +6,8 @@ import CustomerLogin from './CustomerLogin'
 import BaristaProfile from './Barista/BaristaProfile'
 
 
+// Create a helper react component for drilling props down.
+
 const RouterComponent = () => {
   return (
     <Router>

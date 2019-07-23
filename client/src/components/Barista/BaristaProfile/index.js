@@ -1,18 +1,22 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import { TopBar } from '../../../common'
 import { Wrapper } from '../../../common/styled'
 
 
-const BaristaProfile = () => {
-  return (
-    <Wrapper>
-      <TopBar
-        Title="My Schedule"
-      />
-      <Text>This is the Barista's profile.</Text>
-    </Wrapper>
-  )
+class BaristaProfile extends React.Component {
+
+  render() {
+    return (
+      <Wrapper>
+        <TopBar
+          CancelText="CANCEL"
+          Title="My Schedule"
+        />
+        <Text>This is the Barista's profile.</Text>
+      </Wrapper>
+    )
+  }
 }
 
 export default BaristaProfile

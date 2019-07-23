@@ -4,6 +4,7 @@ import Initial from './Initial'
 import BaristaLogin from './BaristaLogin'
 import CustomerLogin from './CustomerLogin'
 import BaristaProfile from './Barista/BaristaProfile'
+import CreateSchedule from './Barista/CreateSchedule'
 
 
 // Create a helper react component for drilling props down.
@@ -15,7 +16,8 @@ const RouterComponent = () => {
         <Scene key="Initial" component={Initial} hideNavBar />
         <Scene key="BaristaLogin" component={BaristaLogin} hideNavBar />
         <Scene key="CustomerLogin" component={CustomerLogin} hideNavBar />
-        <Scene key="BaristaProfile" component={BaristaProfile} hideNavBar initial />
+        <Scene key="BaristaProfile" component={BaristaProfile} hideNavBar />
+        <Scene key="CreateSchedule" component={CreateSchedule} hideNavBar initial />
       </Scene>
     </Router>
   )

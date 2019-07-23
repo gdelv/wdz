@@ -1,4 +1,5 @@
 import React from 'react'
+import { TouchableOpacity } from 'react-native'
 import { TopBar } from '../../../common'
 import plusIcon from '../../../assets/img/plus-icon.png'
 import baristaDev from '../../../assets/img/barista-dev.jpeg'
@@ -23,20 +24,14 @@ import {
 class BaristaProfile extends React.Component {
   renderPlusIcon = () => {
     return (
-      <PlusIcon
-        source={plusIcon}
-      />
+      <TouchableOpacity>
+        <PlusIcon
+          source={plusIcon}
+        />
+      </TouchableOpacity>
     )
   }
-  // renderCancelButton = () => {
-  //   return (
-  //     <TouchableOpacity>
-  //       <CancelText>
-  //         CANCEL
-  //       </CancelText>
-  //     </TouchableOpacity>
-  //   )
-  // }
+
   render() {
     return (
       <Wrapper>

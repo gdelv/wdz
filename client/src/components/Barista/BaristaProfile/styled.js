@@ -3,18 +3,12 @@ import styled from 'styled-components'
 const Wrapper = styled.View`
   height: 100%;
 `
-const CancelText = styled.Text`
-  color: white;
-  font-family: ${props => props.theme.POPPINS_BOLD};
-  font-size: 15px;
-`
 const PlusIcon = styled.Image`
   width: 20px;
   height: 20px;
 `
 const PhotoContainer = styled.View`
   height: 30%;
-  background-color: grey;
   display: flex;
   flex-direction: row;
 `
@@ -27,7 +21,7 @@ const PhotoRight = styled.ImageBackground`
   height: 100%;
   width: 100%;
   border-left-width: 2.5px;
-  border-left-color: white;
+  border-left-color: ${props => props.theme.WHITE};
 `
 const Shader = styled.View`
   height: 100%;

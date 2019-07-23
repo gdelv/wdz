@@ -13,24 +13,40 @@ class BaristaProfile extends React.Component {
       />
     )
   }
-  renderCancelButton = () => {
-    return (
-      <TouchableOpacity>
-        <CancelText>
-          CANCEL
-        </CancelText>
-      </TouchableOpacity>
-    )
-  }
+  // renderCancelButton = () => {
+  //   return (
+  //     <TouchableOpacity>
+  //       <CancelText>
+  //         CANCEL
+  //       </CancelText>
+  //     </TouchableOpacity>
+  //   )
+  // }
   render() {
     return (
       <Wrapper>
+
         <TopBar
           Title="My Schedule"
-          LeftSection={this.renderCancelButton()}
           RightSection={this.renderPlusIcon()}
         />
-        <Text>This is the Barista's profile.</Text>
+
+        {/*
+          Here I will add the photo section for
+          the barista profile.
+        */}
+
+
+        {/* 
+          Here there will be a Calendar picker
+          for the next 2 weeks. 
+        */}
+
+        {/*
+          Here there will be a default calendar to
+          add if the user has no calendars.
+        */}
+
       </Wrapper>
     )
   }

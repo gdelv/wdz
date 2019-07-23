@@ -4,7 +4,7 @@ const Wrapper = styled.View`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: grey;
+  background-color: ${props => props.theme.GREEN};
   height: 15%;
   max-height: 110px;
   align-items: center;

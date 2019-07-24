@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.View`
   height: 100%;
+  background-color: ${props => props.theme.WHITE};;
 `
 const CancelText = styled.Text`
   color: ${props => props.theme.OFF_WHITE};

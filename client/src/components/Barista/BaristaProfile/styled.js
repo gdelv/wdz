@@ -47,7 +47,8 @@ const InnerContainer = styled.View`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 40%;
+  height: 200px;
+  margin-bottom: 100px;
 `
 const TopText = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};

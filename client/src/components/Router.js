@@ -18,7 +18,7 @@ const RouterComponent = () => {
         <Scene key="BaristaProfile" component={BaristaProfile} hideNavBar />
         <Scene key="CreateSchedule" component={CreateSchedule} hideNavBar />
         <Scene key="Notes" component={Notes} hideNavBar />
-        <Scene key="CustomerHome" component={CustomerHome} hideNavBar initial />
+        <Scene key="CustomerHome" component={CustomerHome} hideNavBar />
 
       </Scene>
     </Router>

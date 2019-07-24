@@ -7,7 +7,7 @@ const Wrapper = styled.View`
 const TitleContainer = styled.View`
   height: 25%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 `
 const Title = styled.Text`
@@ -18,10 +18,11 @@ const Title = styled.Text`
   padding-right: 20px;
 `
 const SecondaryContainer = styled.View`
-  height: 15%;
+  height: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  /* background-color: red; */
 `
 const SecondaryText = styled.Text`
   font-size: 30px;
@@ -40,7 +41,7 @@ const Button = styled.TouchableOpacity`
   background-color: ${props => props.theme.GREEN};
   border-radius: 20px;
   width: 200px;
-  height: 32px;
+  height: 40px;
 `
 const ButtonText = styled.Text`
   color: ${props => props.theme.WHITE};
@@ -48,7 +49,7 @@ const ButtonText = styled.Text`
   text-align: center;
   font-size: 18px;
   letter-spacing: 0.55px;
-  line-height: 32px;
+  line-height: 40px;
 `
 const DividerContainer = styled.View`
   display: flex;

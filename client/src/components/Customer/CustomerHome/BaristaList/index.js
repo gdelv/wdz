@@ -10,6 +10,11 @@ const BaristaList = () => {
       <BaristaCard />
       <BaristaCard />
       <BaristaCard />
+      <BaristaCard />
+      <BaristaCard />
+      <BaristaCard />
+      <BaristaCard />
+      {/* <BaristaCard /> */}
     </Wrapper>
   )
 }

@@ -5,8 +5,7 @@ const Wrapper = styled.View`
   justify-content: space-between;
   flex-direction: row;
   background-color: ${props => props.theme.GREEN};
-  height: 15%;
-  max-height: 110px;
+  height: 100px
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;

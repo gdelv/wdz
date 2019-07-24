@@ -2,7 +2,7 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import { TopBar } from '../../../common'
 import plusIcon from '../../../assets/img/plus-icon.png'
-import baristaDev from '../../../assets/img/barista-dev.jpeg'
+import baristaDev from '../../../assets/img/developmentPlaceholders/barista-dev.jpeg'
 import coffeePlaceholder from '../../../assets/img/coffee-placeholder.png'
 import {
   Wrapper,

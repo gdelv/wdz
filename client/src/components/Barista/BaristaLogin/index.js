@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from 'react-native'
-import { Header, Navigation, FacebookLogin } from '../../common'
-import { Wrapper } from '../../common/styled'
+import { Header, Navigation, FacebookLogin } from '../../../common'
+import { Wrapper } from '../../../common/styled'
 
 const BaristaLogin = () => {
   return (

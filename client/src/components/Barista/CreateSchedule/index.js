@@ -15,8 +15,12 @@ import {
 
 class CreateSchedule extends React.Component {
   state = {
+    date: new Date(),
+    startTime: new Date(),
+    endTime: new Date(),
     showDatePicker: false,
-    date: new Date()
+    showStartTimePicker: true,
+    showEndTimePicker: false
   }
   toggleDatePicker = () => {
     if (!this.state.showDatePicker) {
@@ -39,10 +43,26 @@ class CreateSchedule extends React.Component {
       )
     }
   }
+  renderStartTimePicker = () => {
+    if (this.state.showStartTimePicker) {
+      return (
+        <DatePickerWrapper>
+          <DatePickerIOS
+            mode="time"
+            date={this.state.startTime}
+            onDateChange={(startTime) => this.setState({ startTime })}
+          />
+        </DatePickerWrapper>
+      )
+    }
+  }
 
   render() {
-    const formatTimeStamp = (num) => dayjs.unix(num).format('dddd, MMMM D YYYY')
-    const selectedDay = formatTimeStamp(this.state.date.getTime() / 1000)
+    const formatToCurrentDate = (num) => dayjs.unix(num).format('dddd, MMMM D YYYY')
+    const formatToCurrentTime = (num) => dayjs.unix(num).format('h : mm A')
+    const selectedDay = formatToCurrentDate(this.state.date.getTime() / 1000)
+    const selectedStartTime = formatToCurrentTime(this.state.startTime.getTime() / 1000)
+    const selectedEndTime = formatToCurrentTime(this.state.endTime.getTime() / 1000)
     return (
       <Wrapper>
         <TopBar
@@ -63,9 +83,10 @@ class CreateSchedule extends React.Component {
           <ScheduleButton>
             <SubContainer>
               <InnerText>Start Time</InnerText>
-              <InnerText>7:00 AM</InnerText>
+              <InnerText>{selectedStartTime}</InnerText>
             </SubContainer>
           </ScheduleButton>
+          {this.renderStartTimePicker()}
           <ScheduleButton>
             <SubContainer>
               <InnerText>End Time</InnerText>

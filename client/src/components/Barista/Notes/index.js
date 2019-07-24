@@ -47,27 +47,23 @@ class Notes extends React.Component {
       this.setState({ receivedBarStatus: 'active' })
     }
   }
-
-  // when the received section is toggled off,
-  // remove the active
-
   render() {
+    const { receivedBarStatus, sentBarStatus } = this.state
     return (
       <Wrapper>
         <TopBar
           Title="PS Notes"
         />
         <Navigation>
-
           <NavigationButton onPress={this.toggleReceivedBar}>
-            <NavigationItem active={this.state.receivedBarStatus}>
-              <NavigationText active={this.state.receivedBarStatus}>RECEIVED</NavigationText>
+            <NavigationItem active={receivedBarStatus}>
+              <NavigationText active={receivedBarStatus}>RECEIVED</NavigationText>
             </NavigationItem>
           </NavigationButton>
 
           <NavigationButton onPress={this.toggleSentBar}>
-            <NavigationItem active={this.state.sentBarStatus}>
-              <NavigationText active={this.state.sentBarStatus}>SENT</NavigationText>
+            <NavigationItem active={sentBarStatus}>
+              <NavigationText active={sentBarStatus}>SENT</NavigationText>
             </NavigationItem>
           </NavigationButton>
 

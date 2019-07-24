@@ -1,7 +1,8 @@
 import React from 'react'
+import { ScrollView } from 'react-native'
 import Sent from './Sent'
 import Received from './Received'
-import { TopBar } from '../../../common'
+import { TopBar, NavBar } from '../../../common'
 import {
   Wrapper,
   Navigation,
@@ -69,10 +70,12 @@ class Notes extends React.Component {
 
         </Navigation>
 
-        <BottomContainer>
-          {this.renderComponent()}
-        </BottomContainer>
-
+        <ScrollView>
+          <BottomContainer>
+            {this.renderComponent()}
+          </BottomContainer>
+        </ScrollView>
+        <NavBar />
       </Wrapper>
     )
   }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.View`
-  height: 100%;
+  flex: 1;
   background-color: ${props => props.theme.WHITE};
 `
 const Navigation = styled.View`

@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, TouchableOpacity, DatePickerIOS } from 'react-native'
+import moment from 'moment'
+import { TouchableOpacity, DatePickerIOS } from 'react-native'
 import { TopBar } from '../../../common'
 import {
   Wrapper,
@@ -26,13 +27,15 @@ class CreateSchedule extends React.Component {
   }
   renderDatePicker = () => {
     if (this.state.showDatePicker) {
-      return <DatePickerIOS date={this.state.date} />
+      return <DatePickerIOS mode="date" date={this.state.date} />
     }
     if (!this.state.showDatePicker) {
       return null
     }
   }
   render() {
+    const dayOfWeek = (num) => moment.unix(num).format('dddd, MMMM D YYYY')
+    const y = dayOfWeek(this.state.date.getTime() / 1000)
     return (
       <Wrapper>
         <TopBar
@@ -44,7 +47,9 @@ class CreateSchedule extends React.Component {
           <ScheduleButton onPress={this.toggleDatePicker}>
             <SubContainer>
               <InnerText>Date</InnerText>
-              <InnerText>Monday, March 28 2016</InnerText>
+              <InnerText>
+                {y}
+              </InnerText>
             </SubContainer>
           </ScheduleButton>
           {/* <DatePickerIOS date={this.state.date} /> */}

@@ -6,6 +6,7 @@ const theme = {
   BLACK: 'rgb(0, 0, 0)',
   WHITE: 'rgb(255, 255, 255)',
   GREY: 'rgb(182, 182, 182)',
+  GREY_LINE: 'rgb(195, 195, 195)',
   OFF_WHITE: 'rgba(255, 255, 255, 0.80)',
   SHADE: 'rgba(0, 0, 0, 0.3)',
   POPPINS_LIGHT: 'Poppins-Light',

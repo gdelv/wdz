@@ -1,25 +1,54 @@
 import React from 'react'
 import { Actions } from 'react-native-router-flux'
-import { Header } from '../../common'
-import { Wrapper } from '../../common/styled'
-import { ButtonContainer, InnerButtonContainer, Button, ButtonText } from './styled'
+import coffeeMug from '../../assets/img/coffee-mug.png'
+import {
+  Wrapper,
+  TitleContainer,
+  Title,
+  SecondaryContainer,
+  SecondaryText,
+  ButtonContainer,
+  InnerButtonContainer,
+  Button,
+  ButtonText,
+  DividerContainer,
+  Divider,
+  CoffeeMug
+} from './styled'
 
 const Initial = () => {
   navigateToCustomerLogin = () => Actions.CustomerLogin()
   navigateToBaristaLogin = () => Actions.BaristaLogin()
   return (
     <Wrapper>
-      <Header>
-        I am a...
-      </Header>
+      <TitleContainer>
+        <Title adjustsFontSizeToFit numberOfLines={1}>
+          Let's sign you up!
+        </Title>
+      </TitleContainer>
+      <SecondaryContainer>
+        <SecondaryText>
+          I am a...
+        </SecondaryText>
+      </SecondaryContainer>
       <ButtonContainer>
+
         <InnerButtonContainer>
-          <Button onPress={navigateToCustomerLogin}>
-            <ButtonText>Customer</ButtonText>
-          </Button>
           <Button onPress={navigateToBaristaLogin}>
             <ButtonText>
-              Barista
+              BARISTA
+          </ButtonText>
+          </Button>
+        </InnerButtonContainer>
+        <DividerContainer>
+          <Divider />
+          <CoffeeMug source={coffeeMug} />
+          <Divider />
+        </DividerContainer>
+        <InnerButtonContainer>
+          <Button onPress={navigateToCustomerLogin}>
+            <ButtonText>
+              CUSTOMER
           </ButtonText>
           </Button>
         </InnerButtonContainer>

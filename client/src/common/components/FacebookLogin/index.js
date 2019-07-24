@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, InnerContainer, Description, ButtonContainer, FacebookButton, FacebookIcon, ButtonText } from './styled'
-import facebookIcon from '../../../assets/img/facebookIcon.svg'
+import facebookIcon from '../../../assets/img/iconFacebookWhite.png'
 
 const FacebookLogin = (props) => {
   return (

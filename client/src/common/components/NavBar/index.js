@@ -1,9 +1,8 @@
 import React from 'react'
-import home from '../../../assets/img/home.png'
-import search from '../../../assets/img/search.png'
-import notes from '../../../assets/img/notes.png'
-import profile from '../../../assets/img/profile.png'
-import notesHighlighted from '../../../assets/img/notesHighlighted.png'
+import home from '../../../assets/img/navIcons/home.png'
+import search from '../../../assets/img/navIcons/search.png'
+import notes from '../../../assets/img/navIcons/notes.png'
+import profile from '../../../assets/img/navIcons/profile.png'
 import {
   Wrapper,
   IconContainer,

@@ -22,7 +22,7 @@ import {
 } from './styled'
 
 class BaristaProfile extends React.Component {
-  renderPlusIcon = () => {
+  renderPlusButton() {
     return (
       <TouchableOpacity>
         <PlusIcon
@@ -31,14 +31,13 @@ class BaristaProfile extends React.Component {
       </TouchableOpacity>
     )
   }
-
   render() {
     return (
       <Wrapper>
 
         <TopBar
           Title="My Schedule"
-          RightSection={this.renderPlusIcon()}
+          RightSection={this.renderPlusButton()}
         />
 
         <PhotoContainer>

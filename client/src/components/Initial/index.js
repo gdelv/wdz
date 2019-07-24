@@ -32,7 +32,6 @@ const Initial = () => {
         </SecondaryText>
       </SecondaryContainer>
       <ButtonContainer>
-
         <InnerButtonContainer>
           <Button onPress={navigateToBaristaLogin}>
             <ButtonText>

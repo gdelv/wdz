@@ -27,15 +27,17 @@ class CreateSchedule extends React.Component {
   }
   renderDatePicker = () => {
     if (this.state.showDatePicker) {
-      return <DatePickerIOS mode="date" date={this.state.date} />
+      return (
+        <DatePickerIOS mode="date" date={this.state.date} onDateChange={(date) => this.setState({ date })} />
+      )
     }
     if (!this.state.showDatePicker) {
       return null
     }
   }
   render() {
-    const dayOfWeek = (num) => moment.unix(num).format('dddd, MMMM D YYYY')
-    const y = dayOfWeek(this.state.date.getTime() / 1000)
+    const formatTimeStamp = (num) => moment.unix(num).format('dddd, MMMM D YYYY')
+    const currentDay = formatTimeStamp(this.state.date.getTime() / 1000)
     return (
       <Wrapper>
         <TopBar
@@ -48,7 +50,7 @@ class CreateSchedule extends React.Component {
             <SubContainer>
               <InnerText>Date</InnerText>
               <InnerText>
-                {y}
+                {currentDay}
               </InnerText>
             </SubContainer>
           </ScheduleButton>

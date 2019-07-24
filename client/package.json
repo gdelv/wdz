@@ -10,7 +10,7 @@
     "ios10": "react-native run-ios --simulator='iPhone Xs Max'"
   },
   "dependencies": {
-    "moment": "^2.24.0",
+    "dayjs": "^1.8.15",
     "react": "16.8.6",
     "react-native": "0.60.4",
     "react-native-router-flux": "^4.0.6",

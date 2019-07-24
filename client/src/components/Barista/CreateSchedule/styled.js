@@ -19,13 +19,13 @@ const MainContainer = styled.View`
 const ScheduleButton = styled.TouchableOpacity`
   height: 20%;
   border-bottom-width: 1px;
+  border-bottom-color: ${props => props.theme.GREY};
   display: flex;
   flex-direction: column;
 
 `
 const SubContainer = styled.View`
   height: 100%;
-  border-bottom-color: ${props => props.theme.GREY};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,6 +38,10 @@ const InnerText = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
   font-size: 16px;
 `
+const DatePickerWrapper = styled.View`
+  border-bottom-width: 1px;
+  border-bottom-color: ${props => props.theme.GREY};
+`
 
 export {
   Wrapper,
@@ -46,5 +50,6 @@ export {
   MainContainer,
   ScheduleButton,
   SubContainer,
-  InnerText
+  InnerText,
+  DatePickerWrapper
 }

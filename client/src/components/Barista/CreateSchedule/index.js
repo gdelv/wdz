@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import { TouchableOpacity, DatePickerIOS } from 'react-native'
 import { TopBar } from '../../../common'
 import {
@@ -10,6 +10,7 @@ import {
   ScheduleButton,
   SubContainer,
   InnerText,
+  DatePickerWrapper
 } from './styled'
 
 class CreateSchedule extends React.Component {
@@ -28,16 +29,20 @@ class CreateSchedule extends React.Component {
   renderDatePicker = () => {
     if (this.state.showDatePicker) {
       return (
-        <DatePickerIOS mode="date" date={this.state.date} onDateChange={(date) => this.setState({ date })} />
+        <DatePickerWrapper>
+          <DatePickerIOS
+            mode="date"
+            date={this.state.date}
+            onDateChange={(date) => this.setState({ date })}
+          />
+        </DatePickerWrapper>
       )
     }
-    if (!this.state.showDatePicker) {
-      return null
-    }
   }
+
   render() {
-    const formatTimeStamp = (num) => moment.unix(num).format('dddd, MMMM D YYYY')
-    const currentDay = formatTimeStamp(this.state.date.getTime() / 1000)
+    const formatTimeStamp = (num) => dayjs.unix(num).format('dddd, MMMM D YYYY')
+    const selectedDay = formatTimeStamp(this.state.date.getTime() / 1000)
     return (
       <Wrapper>
         <TopBar
@@ -50,11 +55,10 @@ class CreateSchedule extends React.Component {
             <SubContainer>
               <InnerText>Date</InnerText>
               <InnerText>
-                {currentDay}
+                {selectedDay}
               </InnerText>
             </SubContainer>
           </ScheduleButton>
-          {/* <DatePickerIOS date={this.state.date} /> */}
           {this.renderDatePicker()}
           <ScheduleButton>
             <SubContainer>

@@ -23,36 +23,40 @@ class CreateSchedule extends React.Component {
     showEndTimePicker: false
   }
   toggleDatePicker = () => {
-    if (!this.state.showDatePicker) {
+    const { showDatePicker } = this.state
+    if (!showDatePicker) {
       this.setState({ showDatePicker: true })
     }
-    if (this.state.showDatePicker) {
+    if (showDatePicker) {
       this.setState({ showDatePicker: false })
     }
   }
   toggleStartTimePicker = () => {
-    if (!this.state.showStartTimePicker) {
+    const { showStartTimePicker } = this.state
+    if (!showStartTimePicker) {
       this.setState({ showStartTimePicker: true })
     }
-    if (this.state.showStartTimePicker) {
+    if (showStartTimePicker) {
       this.setState({ showStartTimePicker: false })
     }
   }
   toggleEndTimePicker = () => {
-    if (!this.state.showEndTimePicker) {
+    const { showEndTimePicker } = this.state
+    if (!showEndTimePicker) {
       this.setState({ showEndTimePicker: true })
     }
-    if (this.state.showEndTimePicker) {
+    if (showEndTimePicker) {
       this.setState({ showEndTimePicker: false })
     }
   }
   renderDatePicker = () => {
-    if (this.state.showDatePicker) {
+    const { date, showDatePicker } = this.state
+    if (showDatePicker) {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
             mode="date"
-            date={this.state.date}
+            date={date}
             onDateChange={(date) => this.setState({ date })}
           />
         </DatePickerWrapper>
@@ -60,12 +64,13 @@ class CreateSchedule extends React.Component {
     }
   }
   renderStartTimePicker = () => {
-    if (this.state.showStartTimePicker) {
+    const { startTime, showStartTimePicker } = this.state
+    if (showStartTimePicker) {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
             mode="time"
-            date={this.state.startTime}
+            date={startTime}
             onDateChange={(startTime) => this.setState({ startTime })}
           />
         </DatePickerWrapper>
@@ -73,19 +78,37 @@ class CreateSchedule extends React.Component {
     }
   }
   renderEndTimePicker = () => {
-    if (this.state.showEndTimePicker) {
+    const { endTime, showEndTimePicker } = this.state
+    if (showEndTimePicker) {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
             mode="time"
-            date={this.state.startTime}
+            date={endTime}
             onDateChange={(endTime) => this.setState({ endTime })}
           />
         </DatePickerWrapper>
       )
     }
   }
-
+  renderCancelButton = () => {
+    return (
+      <TouchableOpacity>
+        <CancelText>
+          CANCEL
+        </CancelText>
+      </TouchableOpacity>
+    )
+  }
+  renderSaveButton = () => {
+    return (
+      <TouchableOpacity>
+        <SaveText>
+          SAVE
+        </SaveText>
+      </TouchableOpacity>
+    )
+  }
   render() {
     const formatToCurrentDate = (num) => dayjs.unix(num).format('dddd, MMMM D YYYY')
     const formatToCurrentTime = (num) => dayjs.unix(num).format('h : mm A')
@@ -137,24 +160,6 @@ class CreateSchedule extends React.Component {
           </ScheduleButton>
         </MainContainer>
       </Wrapper >
-    )
-  }
-  renderCancelButton = () => {
-    return (
-      <TouchableOpacity>
-        <CancelText>
-          CANCEL
-        </CancelText>
-      </TouchableOpacity>
-    )
-  }
-  renderSaveButton = () => {
-    return (
-      <TouchableOpacity>
-        <SaveText>
-          SAVE
-        </SaveText>
-      </TouchableOpacity>
     )
   }
 }

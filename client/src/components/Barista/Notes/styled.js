@@ -6,7 +6,7 @@ const Wrapper = styled.View`
 `
 const Navigation = styled.View`
   background-color: ${props => props.theme.OFF_WHITE};
-  height: 12.5%;
+  height: 7%;
   max-height: 80px;
   display: flex;
   flex-direction: row;
@@ -24,13 +24,14 @@ const NavigationItem = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom-width: ${props => props.active ? "3px" : "0"};
+  border-bottom-color: ${props => props.active ? "rgb(26, 236, 134)" : "white"};
 `
 const NavigationText = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
-  color: ${props => props.theme.GREY};
+  color: ${props => props.active ? "rgb(26, 236, 134)" : "rgb(182, 182, 182)"};
 `
 const BottomContainer = styled.View`
-  background-color: red;
   flex: 1;
 `
 export {

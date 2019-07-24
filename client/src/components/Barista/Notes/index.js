@@ -15,6 +15,8 @@ class Notes extends React.Component {
   state = {
     isSentBarActive: false,
     isReceivedBarActive: true,
+    receivedBarStatus: 'active',
+    sentBarStatus: null
   }
   renderComponent = () => {
     if (this.state.isSentBarActive) {
@@ -31,17 +33,23 @@ class Notes extends React.Component {
     if (!this.state.isSentBarActive) {
       this.setState({ isSentBarActive: true })
       this.setState({ isReceivedBarActive: false })
+      this.setState({ receivedBarStatus: null })
+      this.setState({ sentBarStatus: 'active' })
     }
   }
   toggleReceivedBar = () => {
     if (this.state.isReceivedBarActive) {
-      null
     }
     if (!this.state.isReceivedBarActive) {
       this.setState({ isReceivedBarActive: true })
       this.setState({ isSentBarActive: false })
+      this.setState({ sentBarStatus: null })
+      this.setState({ receivedBarStatus: 'active' })
     }
   }
+
+  // when the received section is toggled off,
+  // remove the active
 
   render() {
     return (
@@ -52,14 +60,14 @@ class Notes extends React.Component {
         <Navigation>
 
           <NavigationButton onPress={this.toggleReceivedBar}>
-            <NavigationItem>
-              <NavigationText>RECEIVED</NavigationText>
+            <NavigationItem active={this.state.receivedBarStatus}>
+              <NavigationText active={this.state.receivedBarStatus}>RECEIVED</NavigationText>
             </NavigationItem>
           </NavigationButton>
 
           <NavigationButton onPress={this.toggleSentBar}>
-            <NavigationItem>
-              <NavigationText>SENT</NavigationText>
+            <NavigationItem active={this.state.sentBarStatus}>
+              <NavigationText active={this.state.sentBarStatus}>SENT</NavigationText>
             </NavigationItem>
           </NavigationButton>
 

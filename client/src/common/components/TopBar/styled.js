@@ -26,6 +26,7 @@ const RightSection = styled.View`
 const Title = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
   font-size: 20px;
+  text-align: center;
 `
 
 export {

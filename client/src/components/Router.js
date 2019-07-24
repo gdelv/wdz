@@ -6,6 +6,8 @@ import CustomerLogin from './CustomerLogin'
 import BaristaProfile from './Barista/BaristaProfile'
 import CreateSchedule from './Barista/CreateSchedule'
 import Notes from './Barista/Notes'
+import Sent from './Barista/Notes/Sent'
+import Received from './Barista/Notes/Received'
 
 const RouterComponent = () => {
   return (

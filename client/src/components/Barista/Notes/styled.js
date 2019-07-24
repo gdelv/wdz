@@ -29,10 +29,15 @@ const NavigationText = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
   color: ${props => props.theme.GREY};
 `
+const BottomContainer = styled.View`
+  background-color: red;
+  flex: 1;
+`
 export {
   Wrapper,
   Navigation,
   NavigationButton,
   NavigationItem,
-  NavigationText
+  NavigationText,
+  BottomContainer
 }

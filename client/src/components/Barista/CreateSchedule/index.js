@@ -20,7 +20,7 @@ class CreateSchedule extends React.Component {
     endTime: new Date(),
     showDatePicker: false,
     showStartTimePicker: true,
-    showEndTimePicker: false
+    showEndTimePicker: true
   }
   toggleDatePicker = () => {
     if (!this.state.showDatePicker) {
@@ -51,6 +51,19 @@ class CreateSchedule extends React.Component {
             mode="time"
             date={this.state.startTime}
             onDateChange={(startTime) => this.setState({ startTime })}
+          />
+        </DatePickerWrapper>
+      )
+    }
+  }
+  renderEndTimePicker = () => {
+    if (this.state.showEndTimePicker) {
+      return (
+        <DatePickerWrapper>
+          <DatePickerIOS
+            mode="time"
+            date={this.state.startTime}
+            onDateChange={(endTime) => this.setState({ endTime })}
           />
         </DatePickerWrapper>
       )
@@ -90,9 +103,10 @@ class CreateSchedule extends React.Component {
           <ScheduleButton>
             <SubContainer>
               <InnerText>End Time</InnerText>
-              <InnerText>8:00 AM</InnerText>
+              <InnerText>{selectedEndTime}</InnerText>
             </SubContainer>
           </ScheduleButton>
+          {this.renderEndTimePicker()}
           <ScheduleButton>
             <SubContainer>
               <InnerText>Break Start</InnerText>

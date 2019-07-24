@@ -24,16 +24,25 @@ class Notes extends React.Component {
       return <Received />
     }
   }
-  toggleComponents = () => {
+  toggleSentBar = () => {
+    if (this.state.isSentBarActive) {
+      null
+    }
     if (!this.state.isSentBarActive) {
       this.setState({ isSentBarActive: true })
       this.setState({ isReceivedBarActive: false })
+    }
+  }
+  toggleReceivedBar = () => {
+    if (this.state.isReceivedBarActive) {
+      null
     }
     if (!this.state.isReceivedBarActive) {
       this.setState({ isReceivedBarActive: true })
       this.setState({ isSentBarActive: false })
     }
   }
+
   render() {
     return (
       <Wrapper>
@@ -42,14 +51,13 @@ class Notes extends React.Component {
         />
         <Navigation>
 
-          <NavigationButton onPress={this.toggleComponents}>
+          <NavigationButton onPress={this.toggleReceivedBar}>
             <NavigationItem>
               <NavigationText>RECEIVED</NavigationText>
             </NavigationItem>
           </NavigationButton>
 
-
-          <NavigationButton onPress={this.toggleComponents}>
+          <NavigationButton onPress={this.toggleSentBar}>
             <NavigationItem>
               <NavigationText>SENT</NavigationText>
             </NavigationItem>

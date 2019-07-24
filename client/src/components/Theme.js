@@ -1,4 +1,5 @@
 import React from 'react'
+import { StatusBar } from 'react-native'
 import { ThemeProvider } from 'styled-components'
 
 const theme = {
@@ -17,7 +18,13 @@ const theme = {
 const Theme = (props) => {
   return (
     <ThemeProvider theme={theme}>
-      {props.children}
+      <>
+        <StatusBar
+          translucent
+          barStyle="light-content"
+        />
+        {props.children}
+      </>
     </ThemeProvider>
   )
 }

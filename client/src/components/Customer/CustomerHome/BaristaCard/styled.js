@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.View`
-  background-color: cornflowerblue;
   width: 100%;
   height: 150px;
 `
@@ -9,6 +8,7 @@ const PhotoContainer = styled.View`
   height: 100%;
   display: flex;
   flex-direction: row;
+  padding-bottom: 5px;
 `
 const ProfilePhoto = styled.Image`
   height: 100%;

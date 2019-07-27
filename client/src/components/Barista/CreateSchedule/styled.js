@@ -42,7 +42,6 @@ const InnerText = styled.Text`
 const DatePickerWrapper = styled.View`
   border-bottom-width: 1px;
   border-bottom-color: ${(props) => props.theme.GREY};
-  height: 100px;
 `
 
 export {

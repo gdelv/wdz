@@ -10,7 +10,6 @@ const useFunctions = () => {
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [showStartTimePicker, setShowStartTimePicker] = useState(false)
   const [showEndTimePicker, setShowEndTimePicker] = useState(false)
-
   const formatToCurrentDate = (num) => {
     const formattedNum = dayjs.unix(num).format('dddd, MMMM D YYYY')
     return formattedNum
@@ -91,15 +90,15 @@ const useFunctions = () => {
   return {
     renderCancelButton,
     renderSaveButton,
-    toggleDatePicker,
-    selectedDay,
     renderDatePicker,
-    toggleStartTimePicker,
-    selectedStartTime,
     renderStartTimePicker,
-    toggleEndTimePicker,
+    renderEndTimePicker,
+    selectedDay,
+    selectedStartTime,
     selectedEndTime,
-    renderEndTimePicker
+    toggleDatePicker,
+    toggleStartTimePicker,
+    toggleEndTimePicker
   }
 }
 

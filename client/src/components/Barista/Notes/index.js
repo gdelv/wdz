@@ -52,13 +52,13 @@ class Notes extends React.Component {
     const { receivedBarStatus, sentBarStatus } = this.state
     return (
       <Wrapper>
-        <TopBar
-          Title="PS Notes"
-        />
+        <TopBar Title='PS Notes' />
         <Navigation>
           <NavigationButton onPress={this.toggleReceivedBar}>
             <NavigationItem active={receivedBarStatus}>
-              <NavigationText active={receivedBarStatus}>RECEIVED</NavigationText>
+              <NavigationText active={receivedBarStatus}>
+                RECEIVED
+              </NavigationText>
             </NavigationItem>
           </NavigationButton>
 
@@ -67,13 +67,10 @@ class Notes extends React.Component {
               <NavigationText active={sentBarStatus}>SENT</NavigationText>
             </NavigationItem>
           </NavigationButton>
-
         </Navigation>
 
         <ScrollView>
-          <BottomContainer>
-            {this.renderComponent()}
-          </BottomContainer>
+          <BottomContainer>{this.renderComponent()}</BottomContainer>
         </ScrollView>
         <NavBar />
       </Wrapper>

@@ -1,8 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
-import {
-  Wrapper
-} from './styled'
+import { Wrapper } from './styled'
 
 const Sent = () => {
   return (

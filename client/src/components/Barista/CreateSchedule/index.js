@@ -119,12 +119,12 @@ class CreateSchedule extends React.Component {
     return (
       <React.Fragment>
         <Wrapper>
+          <TopBar
+            Title='Create Schedule'
+            LeftSection={this.renderCancelButton()}
+            RightSection={this.renderSaveButton()}
+          />
           <ScrollView style={{ flex: 1 }}>
-            <TopBar
-              Title='Create Schedule'
-              LeftSection={this.renderCancelButton()}
-              RightSection={this.renderSaveButton()}
-            />
             <MainContainer>
               <ScheduleButton onPress={this.toggleDatePicker}>
                 <SubContainer>

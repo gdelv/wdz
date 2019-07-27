@@ -99,7 +99,7 @@ const CreateSchedule = () => {
           LeftSection={renderCancelButton()}
           RightSection={renderSaveButton()}
         />
-        <ScrollView style={{ flex: 1 }}>
+        <ScrollView>
           <MainContainer>
             <ScheduleButton onPress={toggleDatePicker}>
               <SubContainer>

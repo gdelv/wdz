@@ -10,6 +10,19 @@ const useFunctions = () => {
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [showStartTimePicker, setShowStartTimePicker] = useState(false)
   const [showEndTimePicker, setShowEndTimePicker] = useState(false)
+
+  const formatToCurrentDate = (num) => {
+    const formattedNum = dayjs.unix(num).format('dddd, MMMM D YYYY')
+    return formattedNum
+  }
+  const formatToCurrentTime = (num) => {
+    const formattedNum = dayjs.unix(num).format('h : mm A')
+    return formattedNum
+  }
+  const selectedDay = formatToCurrentDate(date.getTime() / 1000)
+  const selectedStartTime = formatToCurrentTime(startTime.getTime() / 1000)
+  const selectedEndTime = formatToCurrentTime(endTime.getTime() / 1000)
+
   toggleDatePicker = () => {
     !showDatePicker ? setShowDatePicker(true) : null
     showDatePicker ? setShowDatePicker(false) : null
@@ -75,12 +88,6 @@ const useFunctions = () => {
       </TouchableOpacity>
     )
   }
-  const formatToCurrentDate = (num) =>
-    dayjs.unix(num).format('dddd, MMMM D YYYY')
-  const formatToCurrentTime = (num) => dayjs.unix(num).format('h : mm A')
-  const selectedDay = formatToCurrentDate(date.getTime() / 1000)
-  const selectedStartTime = formatToCurrentTime(startTime.getTime() / 1000)
-  const selectedEndTime = formatToCurrentTime(endTime.getTime() / 1000)
   return {
     renderCancelButton,
     renderSaveButton,

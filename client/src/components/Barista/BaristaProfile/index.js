@@ -22,16 +22,16 @@ import {
 } from './styled'
 
 const BaristaProfile = () => {
-  renderPlusButton = () => {
-    return (
-      <TouchableOpacity>
-        <PlusIcon source={plusIcon} />
-      </TouchableOpacity>
-    )
-  }
   return (
     <Wrapper>
-      <TopBar Title='My Schedule' RightSection={this.renderPlusButton()} />
+      <TopBar
+        Title='My Schedule'
+        RightSection={() => (
+          <TouchableOpacity>
+            <PlusIcon source={plusIcon} />
+          </TouchableOpacity>
+        )}
+      />
 
       <PhotoContainer>
         <ProfilePhoto source={baristaDev} />

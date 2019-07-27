@@ -7,16 +7,16 @@ import {
   Title
 } from './styled'
 
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <Wrapper>
-      <LeftSection>{this.props.LeftSection}</LeftSection>
+      <LeftSection>{props.LeftSection}</LeftSection>
       <MiddleSection>
         <Title adjustsFontSizeToFit numberOfLines={1}>
-          {this.props.Title}
+          {props.Title}
         </Title>
       </MiddleSection>
-      <RightSection>{this.props.RightSection}</RightSection>
+      <RightSection>{props.RightSection}</RightSection>
     </Wrapper>
   )
 }

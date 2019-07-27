@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { ScrollView } from 'react-native'
 import Sent from './Sent'
 import Received from './Received'
@@ -12,70 +12,64 @@ import {
   BottomContainer
 } from './styled'
 
-class Notes extends React.Component {
-  state = {
-    isSentBarActive: false,
-    isReceivedBarActive: true,
-    receivedBarStatus: 'active',
-    sentBarStatus: null
-  }
+const Notes = () => {
+  const [isSentBarActive, setIsSentBarActive] = useState(false)
+  const [isReceivedBarActive, setIsReceivedBarActive] = useState(true)
+  const [receivedBarStatus, setReceivedBarStatus] = useState('active')
+  const [sentBarStatus, setSentBarStatus] = useState(null)
+
   renderComponent = () => {
-    if (this.state.isSentBarActive) {
+    if (isSentBarActive) {
       return <Sent />
     }
-    if (this.state.isReceivedBarActive) {
+    if (isReceivedBarActive) {
       return <Received />
     }
   }
   toggleSentBar = () => {
-    if (this.state.isSentBarActive) {
+    if (isSentBarActive) {
       null
     }
-    if (!this.state.isSentBarActive) {
-      this.setState({ isSentBarActive: true })
-      this.setState({ isReceivedBarActive: false })
-      this.setState({ receivedBarStatus: null })
-      this.setState({ sentBarStatus: 'active' })
+    if (!isSentBarActive) {
+      setIsSentBarActive(true)
+      setIsReceivedBarActive(false)
+      setReceivedBarStatus(null)
+      setSentBarStatus('active')
     }
   }
   toggleReceivedBar = () => {
-    if (this.state.isReceivedBarActive) {
+    if (isReceivedBarActive) {
     }
-    if (!this.state.isReceivedBarActive) {
-      this.setState({ isReceivedBarActive: true })
-      this.setState({ isSentBarActive: false })
-      this.setState({ sentBarStatus: null })
-      this.setState({ receivedBarStatus: 'active' })
+    if (!isReceivedBarActive) {
+      setIsReceivedBarActive(true)
+      setIsSentBarActive(false)
+      setSentBarStatus(null)
+      setReceivedBarStatus('active')
     }
   }
-  render() {
-    const { receivedBarStatus, sentBarStatus } = this.state
-    return (
-      <Wrapper>
-        <TopBar Title='PS Notes' />
-        <Navigation>
-          <NavigationButton onPress={this.toggleReceivedBar}>
-            <NavigationItem active={receivedBarStatus}>
-              <NavigationText active={receivedBarStatus}>
-                RECEIVED
-              </NavigationText>
-            </NavigationItem>
-          </NavigationButton>
+  return (
+    <Wrapper>
+      <TopBar Title='PS Notes' />
+      <Navigation>
+        <NavigationButton onPress={toggleReceivedBar}>
+          <NavigationItem active={receivedBarStatus}>
+            <NavigationText active={receivedBarStatus}>RECEIVED</NavigationText>
+          </NavigationItem>
+        </NavigationButton>
 
-          <NavigationButton onPress={this.toggleSentBar}>
-            <NavigationItem active={sentBarStatus}>
-              <NavigationText active={sentBarStatus}>SENT</NavigationText>
-            </NavigationItem>
-          </NavigationButton>
-        </Navigation>
+        <NavigationButton onPress={toggleSentBar}>
+          <NavigationItem active={sentBarStatus}>
+            <NavigationText active={sentBarStatus}>SENT</NavigationText>
+          </NavigationItem>
+        </NavigationButton>
+      </Navigation>
 
-        <ScrollView>
-          <BottomContainer>{this.renderComponent()}</BottomContainer>
-        </ScrollView>
-        <NavBar />
-      </Wrapper>
-    )
-  }
+      <ScrollView>
+        <BottomContainer>{renderComponent()}</BottomContainer>
+      </ScrollView>
+      <NavBar />
+    </Wrapper>
+  )
 }
 
 export default Notes

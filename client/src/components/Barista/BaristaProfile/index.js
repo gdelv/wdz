@@ -26,11 +26,11 @@ const BaristaProfile = () => {
     <Wrapper>
       <TopBar
         Title='My Schedule'
-        RightSection={() => (
+        RightSection={
           <TouchableOpacity>
             <PlusIcon source={plusIcon} />
           </TouchableOpacity>
-        )}
+        }
       />
 
       <PhotoContainer>

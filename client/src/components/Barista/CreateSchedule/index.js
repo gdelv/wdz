@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import dayjs from 'dayjs'
 import { TouchableOpacity, DatePickerIOS, ScrollView } from 'react-native'
 import { TopBar, NavBar } from '../../../common'
@@ -13,79 +13,59 @@ import {
   DatePickerWrapper
 } from './styled'
 
-class CreateSchedule extends React.Component {
-  state = {
-    date: new Date(),
-    startTime: new Date(),
-    endTime: new Date(),
-    showDatePicker: false,
-    showStartTimePicker: false,
-    showEndTimePicker: false
-  }
+const CreateSchedule = () => {
+  const [date, setDate] = useState(new Date())
+  const [startTime] = useState(new Date())
+  const [endTime, setEndTime] = useState(new Date())
+  const [showDatePicker, setShowDatePicker] = useState(false)
+  const [showStartTimePicker, setShowStartTimePicker] = useState(false)
+  const [showEndTimePicker, setShowEndTimePicker] = useState(false)
   toggleDatePicker = () => {
-    const { showDatePicker } = this.state
-    if (!showDatePicker) {
-      this.setState({ showDatePicker: true })
-    }
-    if (showDatePicker) {
-      this.setState({ showDatePicker: false })
-    }
+    !showDatePicker ? setShowDatePicker(true) : null
+    showDatePicker ? setShowDatePicker(false) : null
   }
   toggleStartTimePicker = () => {
-    const { showStartTimePicker } = this.state
-    if (!showStartTimePicker) {
-      this.setState({ showStartTimePicker: true })
-    }
-    if (showStartTimePicker) {
-      this.setState({ showStartTimePicker: false })
-    }
+    !showStartTimePicker ? setShowStartTimePicker(true) : null
+    showStartTimePicker ? setShowStartTimePicker(false) : null
   }
   toggleEndTimePicker = () => {
-    const { showEndTimePicker } = this.state
-    if (!showEndTimePicker) {
-      this.setState({ showEndTimePicker: true })
-    }
-    if (showEndTimePicker) {
-      this.setState({ showEndTimePicker: false })
-    }
+    !showEndTimePicker ? setShowEndTimePicker(true) : null
+    showEndTimePicker ? setShowEndTimePicker(false) : null
   }
   renderDatePicker = () => {
-    const { date, showDatePicker } = this.state
     if (showDatePicker) {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
             mode='date'
             date={date}
-            onDateChange={(date) => this.setState({ date })}
+            onDateChange={(date) => setDate(date)}
           />
         </DatePickerWrapper>
       )
     }
   }
   renderStartTimePicker = () => {
-    const { startTime, showStartTimePicker } = this.state
     if (showStartTimePicker) {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
-            mode='time'
-            date={startTime}
-            onDateChange={(startTime) => this.setState({ startTime })}
+            mode='date'
+            date={date}
+            onDateChange={(date) => setDate(date)}
           />
         </DatePickerWrapper>
       )
     }
   }
   renderEndTimePicker = () => {
-    const { endTime, showEndTimePicker } = this.state
     if (showEndTimePicker) {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
             mode='time'
             date={endTime}
-            onDateChange={(endTime) => this.setState({ endTime })}
+            onDateChange={(endTime) => setEndTime(endTime)}
           />
         </DatePickerWrapper>
       )
@@ -105,67 +85,61 @@ class CreateSchedule extends React.Component {
       </TouchableOpacity>
     )
   }
-  render() {
-    const formatToCurrentDate = (num) =>
-      dayjs.unix(num).format('dddd, MMMM D YYYY')
-    const formatToCurrentTime = (num) => dayjs.unix(num).format('h : mm A')
-    const selectedDay = formatToCurrentDate(this.state.date.getTime() / 1000)
-    const selectedStartTime = formatToCurrentTime(
-      this.state.startTime.getTime() / 1000
-    )
-    const selectedEndTime = formatToCurrentTime(
-      this.state.endTime.getTime() / 1000
-    )
-    return (
-      <React.Fragment>
-        <Wrapper>
-          <TopBar
-            Title='Create Schedule'
-            LeftSection={this.renderCancelButton()}
-            RightSection={this.renderSaveButton()}
-          />
-          <ScrollView style={{ flex: 1 }}>
-            <MainContainer>
-              <ScheduleButton onPress={this.toggleDatePicker}>
-                <SubContainer>
-                  <InnerText>Date</InnerText>
-                  <InnerText>{selectedDay}</InnerText>
-                </SubContainer>
-              </ScheduleButton>
-              {this.renderDatePicker()}
-              <ScheduleButton onPress={this.toggleStartTimePicker}>
-                <SubContainer>
-                  <InnerText>Start Time</InnerText>
-                  <InnerText>{selectedStartTime}</InnerText>
-                </SubContainer>
-              </ScheduleButton>
-              {this.renderStartTimePicker()}
-              <ScheduleButton onPress={this.toggleEndTimePicker}>
-                <SubContainer>
-                  <InnerText>End Time</InnerText>
-                  <InnerText>{selectedEndTime}</InnerText>
-                </SubContainer>
-              </ScheduleButton>
-              {this.renderEndTimePicker()}
-              <ScheduleButton>
-                <SubContainer>
-                  <InnerText>Break Start</InnerText>
-                  <InnerText>(optional)</InnerText>
-                </SubContainer>
-              </ScheduleButton>
-              <ScheduleButton>
-                <SubContainer>
-                  <InnerText>Break End</InnerText>
-                  <InnerText>(optional)</InnerText>
-                </SubContainer>
-              </ScheduleButton>
-            </MainContainer>
-          </ScrollView>
-          <NavBar />
-        </Wrapper>
-      </React.Fragment>
-    )
-  }
+  const formatToCurrentDate = (num) =>
+    dayjs.unix(num).format('dddd, MMMM D YYYY')
+  const formatToCurrentTime = (num) => dayjs.unix(num).format('h : mm A')
+  const selectedDay = formatToCurrentDate(date.getTime() / 1000)
+  const selectedStartTime = formatToCurrentTime(startTime.getTime() / 1000)
+  const selectedEndTime = formatToCurrentTime(endTime.getTime() / 1000)
+  return (
+    <React.Fragment>
+      <Wrapper>
+        <TopBar
+          Title='Create Schedule'
+          LeftSection={renderCancelButton()}
+          RightSection={renderSaveButton()}
+        />
+        <ScrollView style={{ flex: 1 }}>
+          <MainContainer>
+            <ScheduleButton onPress={toggleDatePicker}>
+              <SubContainer>
+                <InnerText>Date</InnerText>
+                <InnerText>{selectedDay}</InnerText>
+              </SubContainer>
+            </ScheduleButton>
+            {renderDatePicker()}
+            <ScheduleButton onPress={toggleStartTimePicker}>
+              <SubContainer>
+                <InnerText>Start Time</InnerText>
+                <InnerText>{selectedStartTime}</InnerText>
+              </SubContainer>
+            </ScheduleButton>
+            {renderStartTimePicker()}
+            <ScheduleButton onPress={toggleEndTimePicker}>
+              <SubContainer>
+                <InnerText>End Time</InnerText>
+                <InnerText>{selectedEndTime}</InnerText>
+              </SubContainer>
+            </ScheduleButton>
+            {renderEndTimePicker()}
+            <ScheduleButton>
+              <SubContainer>
+                <InnerText>Break Start</InnerText>
+                <InnerText>(optional)</InnerText>
+              </SubContainer>
+            </ScheduleButton>
+            <ScheduleButton>
+              <SubContainer>
+                <InnerText>Break End</InnerText>
+                <InnerText>(optional)</InnerText>
+              </SubContainer>
+            </ScheduleButton>
+          </MainContainer>
+        </ScrollView>
+        <NavBar />
+      </Wrapper>
+    </React.Fragment>
+  )
 }
 
 export default CreateSchedule

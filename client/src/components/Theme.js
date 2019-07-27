@@ -20,7 +20,6 @@ const Theme = (props) => {
     <ThemeProvider theme={theme}>
       <>
         <StatusBar
-          translucent
           barStyle="light-content"
         />
         {props.children}

@@ -8,7 +8,7 @@ const Wrapper = styled.View`
   align-items: center;
   justify-content: space-evenly;
   border-top-width: 1px;
-  border-top-color: ${props => props.theme.GREEN};
+  border-top-color: ${(props) => props.theme.GREEN};
 `
 const IconContainer = styled.View`
   height: 70%;
@@ -17,12 +17,6 @@ const IconContainer = styled.View`
   justify-content: center;
   align-items: center;
 `
-const NavIcon = styled.Image`
-`
+const NavIcon = styled.Image``
 
-
-export {
-  Wrapper,
-  IconContainer,
-  NavIcon
-}
+export { Wrapper, IconContainer, NavIcon }

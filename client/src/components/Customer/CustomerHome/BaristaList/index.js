@@ -4,19 +4,20 @@ import {
   Wrapper
 } from './styled'
 
-const BaristaList = () => {
-  return (
-    <Wrapper>
-      <BaristaCard />
-      <BaristaCard />
-      <BaristaCard />
-      <BaristaCard />
-      <BaristaCard />
-      <BaristaCard />
-      <BaristaCard />
-      {/* <BaristaCard /> */}
-    </Wrapper>
-  )
+class BaristaList extends React.Component {
+  renderList = () => {
+    return <FlatList />
+  }
+  render() {
+    console.log(this.props)
+    return (
+      <Wrapper>
+        <BaristaCard />
+        <BaristaCard />
+        <BaristaCard />
+      </Wrapper>
+    )
+  }
 }
 
 export default BaristaList

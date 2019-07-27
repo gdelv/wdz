@@ -1,6 +1,5 @@
 import React from 'react'
 import BaristaList from './BaristaList'
-import { ScrollView } from 'react-native'
 import { TopBar } from '../../../common'
 import {
   Wrapper,

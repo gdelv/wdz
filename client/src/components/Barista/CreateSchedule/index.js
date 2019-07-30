@@ -1,4 +1,5 @@
 import React from 'react'
+import { Actions } from 'react-native-router-flux'
 import { useFunctions } from './useFunctions'
 import { ScrollView } from 'react-native'
 import { TopBar, NavBar } from '../../../common'
@@ -69,7 +70,7 @@ const CreateSchedule = () => {
             </ScheduleButton>
           </MainContainer>
         </ScrollView>
-        <NavBar />
+        <NavBar navigateHome={() => Actions.Initial()} />
       </Wrapper>
     </React.Fragment>
   )

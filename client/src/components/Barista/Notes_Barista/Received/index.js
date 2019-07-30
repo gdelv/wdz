@@ -11,7 +11,7 @@ const Received = () => {
             Check back later!
           </Text_Title>
           <Text_Subtext>
-            Notes from your customers will show up here.
+            Notes from your customers will show up here. 🥰
           </Text_Subtext>
         </View_Container>
       </ScrollView>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Actions } from 'react-native-router-flux'
 import { TouchableOpacity, DatePickerIOS } from 'react-native'
 import { CancelText, SaveText, DatePickerWrapper } from './styled'
 import dayjs from 'dayjs'
@@ -75,7 +76,7 @@ const useFunctions = () => {
   }
   renderCancelButton = () => {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => Actions.BaristaProfile()}>
         <CancelText>CANCEL</CancelText>
       </TouchableOpacity>
     )

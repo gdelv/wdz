@@ -30,7 +30,7 @@ const CreateSchedule = () => {
       <Wrapper>
         <TopBar
           Title='Create Schedule'
-          LeftSection={renderCancelButton()}
+          Left={renderCancelButton()}
           RightSection={renderSaveButton()}
         />
         <ScrollView>
@@ -70,7 +70,10 @@ const CreateSchedule = () => {
             </ScheduleButton>
           </MainContainer>
         </ScrollView>
-        <NavBar navigateHome={() => Actions.BaristaProfile()} />
+        <NavBar
+          navigateToProfile={() => Actions.BaristaProfile()}
+          navigateToNotes={() => Actions.Notes()}
+        />
       </Wrapper>
     </React.Fragment>
   )

@@ -11,15 +11,15 @@ import {
 const TopBar = (props) => {
   return (
     <Wrapper>
-      <ButtonWrapper onPress={props.LeftSectionOnPress}>
-        <LeftSection>{props.LeftSection}</LeftSection>
+      <ButtonWrapper>
+        <LeftSection>{props.Left}</LeftSection>
       </ButtonWrapper>
       <MiddleSection>
         <Title adjustsFontSizeToFit numberOfLines={1}>
           {props.Title}
         </Title>
       </MiddleSection>
-      <ButtonWrapper>
+      <ButtonWrapper onPress={props.RightSectionOnPress}>
         <RightSection>{props.RightSection}</RightSection>
       </ButtonWrapper>
     </Wrapper>

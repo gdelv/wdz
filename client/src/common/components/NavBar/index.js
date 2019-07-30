@@ -19,13 +19,13 @@ const NavBar = (props) => {
           <NavIcon source={search} />
         </IconContainer>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <IconContainer onPress={props.navigateToNotes}>
+      <TouchableOpacity onPress={props.navigateToNotes}>
+        <IconContainer>
           <NavIcon source={notes} />
         </IconContainer>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <IconContainer onPress={props.navigateToProfile}>
+      <TouchableOpacity onPress={props.navigateToProfile}>
+        <IconContainer>
           <NavIcon source={profile} />
         </IconContainer>
       </TouchableOpacity>

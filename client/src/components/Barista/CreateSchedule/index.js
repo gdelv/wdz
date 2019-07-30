@@ -70,7 +70,7 @@ const CreateSchedule = () => {
             </ScheduleButton>
           </MainContainer>
         </ScrollView>
-        <NavBar navigateHome={() => Actions.Initial()} />
+        <NavBar navigateHome={() => Actions.BaristaProfile()} />
       </Wrapper>
     </React.Fragment>
   )

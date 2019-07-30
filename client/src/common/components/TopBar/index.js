@@ -14,13 +14,11 @@ const TopBar = (props) => {
       <ButtonWrapper onPress={props.LeftSectionOnPress}>
         <LeftSection>{props.LeftSection}</LeftSection>
       </ButtonWrapper>
-      <ButtonWrapper>
-        <MiddleSection>
-          <Title adjustsFontSizeToFit numberOfLines={1}>
-            {props.Title}
-          </Title>
-        </MiddleSection>
-      </ButtonWrapper>
+      <MiddleSection>
+        <Title adjustsFontSizeToFit numberOfLines={1}>
+          {props.Title}
+        </Title>
+      </MiddleSection>
       <ButtonWrapper>
         <RightSection>{props.RightSection}</RightSection>
       </ButtonWrapper>

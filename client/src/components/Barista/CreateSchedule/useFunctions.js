@@ -52,9 +52,9 @@ const useFunctions = () => {
       return (
         <DatePickerWrapper>
           <DatePickerIOS
-            mode='date'
-            date={date}
-            onDateChange={(date) => setDate(date)}
+            mode='time'
+            date={startTime}
+            onDateChange={(startTime) => setDate(startTime)}
           />
         </DatePickerWrapper>
       )
@@ -102,4 +102,4 @@ const useFunctions = () => {
   }
 }
 
-export default useFunctions
+export { useFunctions }

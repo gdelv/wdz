@@ -1,5 +1,5 @@
 import React from 'react'
-import useFunctions from './useFunctions'
+import { useFunctions } from './useFunctions'
 import { ScrollView } from 'react-native'
 import { TopBar, NavBar } from '../../../common'
 import {

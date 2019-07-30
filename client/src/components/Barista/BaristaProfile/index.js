@@ -1,5 +1,6 @@
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
+import { Actions } from 'react-native-router-flux'
 import { TopBar } from '../../../common'
 import plusIcon from '../../../assets/img/plus-icon.png'
 import baristaDev from '../../../assets/img/developmentPlaceholders/barista-dev.jpeg'
@@ -47,7 +48,7 @@ const BaristaProfile = () => {
           <TopText>You're all set!</TopText>
           <MiddleText>Let's create some schedule.</MiddleText>
           <ButtonContainer>
-            <Button>
+            <Button onPress={() => Actions.CreateSchedule()}>
               <ButtonText>ADD NEW</ButtonText>
             </Button>
           </ButtonContainer>

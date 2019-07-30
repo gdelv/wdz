@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Wrapper,
+  ButtonWrapper,
   LeftSection,
   MiddleSection,
   RightSection,
@@ -10,13 +11,19 @@ import {
 const TopBar = (props) => {
   return (
     <Wrapper>
-      <LeftSection>{props.LeftSection}</LeftSection>
-      <MiddleSection>
-        <Title adjustsFontSizeToFit numberOfLines={1}>
-          {props.Title}
-        </Title>
-      </MiddleSection>
-      <RightSection>{props.RightSection}</RightSection>
+      <ButtonWrapper onPress={props.LeftSectionOnPress}>
+        <LeftSection>{props.LeftSection}</LeftSection>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <MiddleSection>
+          <Title adjustsFontSizeToFit numberOfLines={1}>
+            {props.Title}
+          </Title>
+        </MiddleSection>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <RightSection>{props.RightSection}</RightSection>
+      </ButtonWrapper>
     </Wrapper>
   )
 }

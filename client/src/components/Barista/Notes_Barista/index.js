@@ -12,7 +12,7 @@ import {
   BottomContainer
 } from './styled'
 
-const Notes = () => {
+const Notes_Barista = () => {
   const [isSentBarActive, setIsSentBarActive] = useState(false)
   const [isReceivedBarActive, setIsReceivedBarActive] = useState(true)
   const [receivedBarStatus, setReceivedBarStatus] = useState('active')
@@ -72,4 +72,4 @@ const Notes = () => {
   )
 }
 
-export default Notes
+export default Notes_Barista

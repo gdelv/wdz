@@ -72,7 +72,7 @@ const CreateSchedule = () => {
         </ScrollView>
         <NavBar
           navigateToProfile={() => Actions.BaristaProfile()}
-          navigateToNotes={() => Actions.Notes()}
+          navigateToNotes={() => Actions.Notes_Barista()}
         />
       </Wrapper>
     </React.Fragment>

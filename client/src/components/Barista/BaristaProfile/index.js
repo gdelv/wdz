@@ -1,7 +1,7 @@
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacity, ScrollView } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-import { TopBar } from '../../../common'
+import { TopBar, NavBar } from '../../../common'
 import plusIcon from '../../../assets/img/plus-icon.png'
 import baristaDev from '../../../assets/img/developmentPlaceholders/barista-dev.jpeg'
 import coffeePlaceholder from '../../../assets/img/coffee-placeholder.png'
@@ -33,7 +33,6 @@ const BaristaProfile = () => {
           </TouchableOpacity>
         }
       />
-
       <PhotoContainer>
         <ProfilePhoto source={baristaDev} />
         <PhotoRight source={coffeePlaceholder}>
@@ -42,18 +41,20 @@ const BaristaProfile = () => {
           </Shader>
         </PhotoRight>
       </PhotoContainer>
-
-      <BottomContainer>
-        <InnerContainer>
-          <TopText>You're all set!</TopText>
-          <MiddleText>Let's create some schedule.</MiddleText>
-          <ButtonContainer>
-            <Button onPress={() => Actions.CreateSchedule()}>
-              <ButtonText>ADD NEW</ButtonText>
-            </Button>
-          </ButtonContainer>
-        </InnerContainer>
-      </BottomContainer>
+      <ScrollView>
+        <BottomContainer>
+          <InnerContainer>
+            <TopText>You're all set!</TopText>
+            <MiddleText>Let's create some schedule.</MiddleText>
+            <ButtonContainer>
+              <Button onPress={() => Actions.CreateSchedule()}>
+                <ButtonText>ADD NEW</ButtonText>
+              </Button>
+            </ButtonContainer>
+          </InnerContainer>
+        </BottomContainer>
+      </ScrollView>
+      <NavBar />
     </Wrapper>
   )
 }

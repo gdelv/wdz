@@ -21,19 +21,19 @@ const PhotoRight = styled.ImageBackground`
   height: 100%;
   width: 100%;
   border-left-width: 2.5px;
-  border-left-color: ${props => props.theme.WHITE};
+  border-left-color: ${(props) => props.theme.WHITE};
 `
 const Shader = styled.View`
   height: 100%;
   width: 55%;
-  background-color: ${props => props.theme.SHADE};
+  background-color: ${(props) => props.theme.SHADE};
   display: flex;
   justify-content: center;
   padding-left: 20px;
 `
 const Name = styled.Text`
-  color: ${props => props.theme.WHITE};;
-  font-family: ${props => props.theme.POPPINS_BOLD};
+  color: ${(props) => props.theme.WHITE};
+  font-family: ${(props) => props.theme.POPPINS_BOLD};
   letter-spacing: 1.5px;
 `
 const BottomContainer = styled.View`
@@ -51,18 +51,17 @@ const InnerContainer = styled.View`
   margin-bottom: 100px;
 `
 const TopText = styled.Text`
-  font-family: ${props => props.theme.POPPINS_BOLD};
+  font-family: ${(props) => props.theme.POPPINS_BOLD};
   font-size: 30px;
 `
 const MiddleText = styled.Text`
   font-size: 20px;
 `
-const ButtonContainer = styled.View`
-`
+const ButtonContainer = styled.View``
 const Button = styled.TouchableOpacity`
   border-radius: 20px;
   background-color: rgb(26, 236, 134);
-  border: 3px solid ${props => props.theme.GREEN};
+  border: 3px solid ${(props) => props.theme.GREEN};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,10 +69,9 @@ const Button = styled.TouchableOpacity`
   height: 28px;
 `
 const ButtonText = styled.Text`
-  color: ${props => props.theme.WHITE};
-  font-family: ${props => props.theme.POPPINS_BOLD};
+  color: ${(props) => props.theme.WHITE};
+  font-family: ${(props) => props.theme.POPPINS_BOLD};
 `
-
 
 export {
   Wrapper,

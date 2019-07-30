@@ -65,7 +65,7 @@ const Notes_Barista = () => {
         </NavigationButton>
       </Navigation>
 
-      <ScrollView>
+      <ScrollView style={{ flex: 1 }}>
         <BottomContainer>{renderComponent()}</BottomContainer>
       </ScrollView>
       <NavBar navigateToProfile={() => Actions.BaristaProfile()} />

@@ -18,15 +18,22 @@ const RouterComponent = () => {
           <Scene key='CustomerLogin' component={CustomerLogin} hideNavBar />
         </Scene>
         <Scene key='Barista_Flow' hideNavBar initial>
-          <Scene key='BaristaProfile' component={BaristaProfile} hideNavBar />
+          <Scene
+            duration={0}
+            key='BaristaProfile'
+            component={BaristaProfile}
+            hideNavBar
+          />
           <Scene key='CreateSchedule' component={CreateSchedule} hideNavBar />
           <Scene key='Notes_Barista' component={Notes_Barista} hideNavBar />
         </Scene>
 
-        {/* Customer flow. */}
-        {/* Customer Profile. */}
-        {/* Customer Notes */}
-        <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
+        <Scene key='Customer_Flow'>
+          {/* Customer flow. */}
+          {/* Customer Profile. */}
+          {/* Customer Notes */}
+          <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
+        </Scene>
       </Scene>
     </Router>
   )

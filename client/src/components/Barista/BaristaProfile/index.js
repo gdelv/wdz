@@ -28,7 +28,7 @@ const BaristaProfile = () => {
       <TopBar
         Title='My Schedule'
         RightSection={
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => Actions.CreateSchedule()}>
             <PlusIcon source={plusIcon} />
           </TouchableOpacity>
         }
@@ -54,7 +54,7 @@ const BaristaProfile = () => {
           </InnerContainer>
         </BottomContainer>
       </ScrollView>
-      <NavBar />
+      <NavBar navigateToNotes={() => Actions.Notes_Barista()} />
     </Wrapper>
   )
 }

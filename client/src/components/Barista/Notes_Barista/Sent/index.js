@@ -7,7 +7,8 @@ import {
   Text_Title,
   Text_SubText,
   View_Button,
-  Button
+  Button,
+  Text_Button
 } from './styled'
 
 const Sent = () => {
@@ -16,10 +17,15 @@ const Sent = () => {
       <ScrollView>
         <View_Container>
           <View_Text>
-            <Text_Title>No Notes Yet ☹️ </Text_Title>
-            <Text_SubText>
+            <Text_Title>No Notes Yet 🥺 </Text_Title>
+            <Text_SubText adjustsFontSizeToFit numberOfLines={2}>
               Send a note to your favorite customers and it will show up here.
             </Text_SubText>
+            <View_Button>
+              <Button>
+                <Text_Button>NEW NOTE</Text_Button>
+              </Button>
+            </View_Button>
           </View_Text>
         </View_Container>
       </ScrollView>

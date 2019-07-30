@@ -15,11 +15,26 @@ const Text_Title = styled.Text`
   text-align: center;
 `
 const Text_SubText = styled.Text`
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
+  margin-bottom: 12%;
 `
-const View_Button = styled.View``
-const Button = styled.TouchableOpacity``
+const View_Button = styled.View`
+  display: flex;
+  align-items: center;
+`
+const Button = styled.TouchableOpacity`
+  background-color: ${(props) => props.theme.GREEN};
+  width: 70%;
+  height: 30px;
+  border-radius: 20px;
+`
+const Text_Button = styled.Text`
+  color: ${(props) => props.theme.WHITE};
+  font-family: ${(props) => props.theme.POPPINS_BOLD};
+  text-align: center;
+  line-height: 30px;
+`
 
 export {
   Wrapper,
@@ -28,5 +43,6 @@ export {
   Text_Title,
   Text_SubText,
   View_Button,
-  Button
+  Button,
+  Text_Button
 }

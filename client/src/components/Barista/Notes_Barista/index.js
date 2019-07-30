@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { Actions } from 'react-native-router-flux'
 import { ScrollView } from 'react-native'
 import Sent from './Sent'
 import Received from './Received'
@@ -67,7 +68,7 @@ const Notes_Barista = () => {
       <ScrollView>
         <BottomContainer>{renderComponent()}</BottomContainer>
       </ScrollView>
-      <NavBar />
+      <NavBar navigateToProfile={() => Actions.BaristaProfile()} />
     </Wrapper>
   )
 }

@@ -17,15 +17,15 @@ const RouterComponent = () => {
           <Scene key='BaristaLogin' component={BaristaLogin} hideNavBar />
           <Scene key='CustomerLogin' component={CustomerLogin} hideNavBar />
         </Scene>
-        <Scene key='Barista_Flow' hideNavBar initial>
-          <Scene
-            duration={0}
-            key='BaristaProfile'
-            component={BaristaProfile}
-            hideNavBar
-          />
+        <Scene initial key='Barista_Flow' hideNavBar>
+          <Scene key='BaristaProfile' component={BaristaProfile} hideNavBar />
           <Scene key='CreateSchedule' component={CreateSchedule} hideNavBar />
-          <Scene key='Notes_Barista' component={Notes_Barista} hideNavBar />
+          <Scene
+            key='Notes_Barista'
+            component={Notes_Barista}
+            hideNavBar
+            initial
+          />
         </Scene>
 
         <Scene key='Customer_Flow'>

@@ -8,6 +8,7 @@ import CreateSchedule from './Barista/CreateSchedule'
 import Notes_Barista from './Barista/Notes_Barista'
 import CustomerHome from './Customer/CustomerHome'
 import CustomerNotes from './Customer/CustomerNotes'
+import CustomerProfile from './Customer/CustomerProfile'
 
 const RouterComponent = () => {
   return (
@@ -26,7 +27,7 @@ const RouterComponent = () => {
 
         <Scene key='Customer_Flow' hideNavBar initial>
           {/* Customer flow. */}
-          {/* Customer Profile. */}
+          <Scene key='CustomerProfile' component={CustomerProfile} hideNavBar />
           <Scene key='CustomerNotes' component={CustomerNotes} hideNavBar />
           <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
         </Scene>

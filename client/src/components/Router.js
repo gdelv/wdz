@@ -9,6 +9,7 @@ import Notes_Barista from './Barista/Notes_Barista'
 import CustomerHome from './Customer/CustomerHome'
 import CustomerNotes from './Customer/CustomerNotes'
 import CustomerProfile from './Customer/CustomerProfile'
+import CustomerSearch from './Customer/CustomerSearch'
 
 const RouterComponent = () => {
   return (
@@ -24,19 +25,20 @@ const RouterComponent = () => {
           <Scene key='CreateSchedule' component={CreateSchedule} hideNavBar />
           <Scene key='Notes_Barista' component={Notes_Barista} hideNavBar />
         </Scene>
-
         <Scene key='Customer_Flow' hideNavBar initial>
-          {/* Customer flow. */}
           <Scene key='CustomerProfile' component={CustomerProfile} hideNavBar />
           <Scene key='CustomerNotes' component={CustomerNotes} hideNavBar />
           <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
+          <Scene
+            key='CustomerSearch'
+            component={CustomerSearch}
+            hideNavBar
+            initial
+          />
         </Scene>
       </Scene>
     </Router>
   )
-
-  // Create a Customer Profile flow.
-  // Create a Barista Profile flow.
 }
 
 export default RouterComponent

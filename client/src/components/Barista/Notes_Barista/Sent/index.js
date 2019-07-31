@@ -17,7 +17,7 @@ const Sent = () => {
       <ScrollView>
         <View_Container>
           <View_Text>
-            <Text_Title>No Notes Yet 🥺 </Text_Title>
+            <Text_Title>No Notes Yet 🥺</Text_Title>
             <Text_SubText adjustsFontSizeToFit numberOfLines={2}>
               Send a note to your favorite customers and it will show up here.
             </Text_SubText>

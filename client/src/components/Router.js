@@ -7,6 +7,7 @@ import BaristaProfile from './Barista/BaristaProfile'
 import CreateSchedule from './Barista/CreateSchedule'
 import Notes_Barista from './Barista/Notes_Barista'
 import CustomerHome from './Customer/CustomerHome'
+import CustomerNotes from './Customer/CustomerNotes'
 
 const RouterComponent = () => {
   return (
@@ -17,21 +18,16 @@ const RouterComponent = () => {
           <Scene key='BaristaLogin' component={BaristaLogin} hideNavBar />
           <Scene key='CustomerLogin' component={CustomerLogin} hideNavBar />
         </Scene>
-        <Scene initial key='Barista_Flow' hideNavBar>
+        <Scene key='Barista_Flow' hideNavBar>
           <Scene key='BaristaProfile' component={BaristaProfile} hideNavBar />
           <Scene key='CreateSchedule' component={CreateSchedule} hideNavBar />
-          <Scene
-            key='Notes_Barista'
-            component={Notes_Barista}
-            hideNavBar
-            initial
-          />
+          <Scene key='Notes_Barista' component={Notes_Barista} hideNavBar />
         </Scene>
 
-        <Scene key='Customer_Flow'>
+        <Scene key='Customer_Flow' hideNavBar initial>
           {/* Customer flow. */}
           {/* Customer Profile. */}
-          {/* Customer Notes */}
+          <Scene key='CustomerNotes' component={CustomerNotes} hideNavBar />
           <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
         </Scene>
       </Scene>
@@ -40,6 +36,8 @@ const RouterComponent = () => {
 
   // Create a Customer Profile flow.
   // Create a Barista Profile flow.
+  // Change the Scene keys into customer styled components
+  // Give them default attributes where they all should hide the nav bar.
 }
 
 export default RouterComponent

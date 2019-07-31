@@ -36,8 +36,6 @@ const RouterComponent = () => {
 
   // Create a Customer Profile flow.
   // Create a Barista Profile flow.
-  // Change the Scene keys into customer styled components
-  // Give them default attributes where they all should hide the nav bar.
 }
 
 export default RouterComponent

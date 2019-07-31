@@ -12,16 +12,14 @@ const theme = {
   SHADE: 'rgba(0, 0, 0, 0.3)',
   POPPINS_LIGHT: 'Poppins-Light',
   POPPINS_MEDIUM: 'Poppins-Medium',
-  POPPINS_BOLD: 'Poppins-Bold',
+  POPPINS_BOLD: 'Poppins-Bold'
 }
 
 const Theme = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <StatusBar
-          barStyle="light-content"
-        />
+        <StatusBar barStyle='light-content' />
         {props.children}
       </>
     </ThemeProvider>

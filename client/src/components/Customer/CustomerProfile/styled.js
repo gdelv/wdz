@@ -23,6 +23,7 @@ const View_NumberOfFavs = styled.View`
 const Text_Favs = styled.Text`
   font-size: 14px;
   color: ${props => props.theme.WHITE};
+  font-family: ${props => props.theme.POPPINS_MEDIUM};
   padding-left: 1.5px;
 `
 const Text_Number = styled.Text`
@@ -32,12 +33,17 @@ const Text_Number = styled.Text`
   padding-right: 1.5px;
 `
 
-const View_FavoriteBarista = styled.View``
+const View_FavoriteBarista = styled.View`
+  padding-right: 5%;
+  padding-left: 5%;
+`
 const Text_DefaultTitle = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};
+  text-align: center;
   font-size: 30px;
 `
 const Text_DefaultSubText = styled.Text`
+  text-align: center;
   font-size: 18px;
 `
 

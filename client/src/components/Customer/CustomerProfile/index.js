@@ -28,11 +28,15 @@ const CustomerProfile = () => {
         <TopBar Title='Jane Smith' Left={renderGearIcon()} />
         <View_ProfilePicture>{renderProfilePicture()}</View_ProfilePicture>
         <View_NumberOfFavs>
-          <Text_Number>54</Text_Number>
-          <Text_Favs>Faves</Text_Favs>
+          <Text_Number>{null}</Text_Number>
+          <Text_Favs>No Faves Yet.</Text_Favs>
         </View_NumberOfFavs>
-        {/* EMPTY CANVAS SECTION */}
-        {/* Followed by added favorite baristas */}
+        <View_FavoriteBarista>
+          <Text_DefaultTitle>You're all set!</Text_DefaultTitle>
+          <Text_DefaultSubText>
+            Go favorite your baristas and they will show up here!
+          </Text_DefaultSubText>
+        </View_FavoriteBarista>
       </ScrollView>
       <NavBar />
     </React.Fragment>

@@ -11,7 +11,12 @@ const CustomerProfile = () => {
   return (
     <React.Fragment>
       <TopBar Title='John Smith' Left={renderGearIcon()} />
-      <ScrollView />
+      <ScrollView>
+        {/* PROFILE PICTURE SECTION */}
+        {/* Number of FAVS */}
+        {/* EMPTY CANVAS SECTION */}
+        {/* Followed by added favorite baristas */}
+      </ScrollView>
       <NavBar />
     </React.Fragment>
   )

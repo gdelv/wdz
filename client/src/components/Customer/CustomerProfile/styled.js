@@ -8,7 +8,7 @@ const View_ProfilePicture = styled.View`
   height: 200px;
   /* background-color: seagreen; */
 `
-const Image_ProfilePicture = styled.View`
+const Image_ProfilePicture = styled.Image`
   height: 100%;
   width: 100%;
 `
@@ -32,11 +32,23 @@ const Text_Number = styled.Text`
   padding-right: 1.5px;
 `
 
+const View_FavoriteBarista = styled.View``
+const Text_DefaultTitle = styled.Text`
+  font-family: ${props => props.theme.POPPINS_BOLD};
+  font-size: 30px;
+`
+const Text_DefaultSubText = styled.Text`
+  font-size: 18px;
+`
+
 export {
   Wrapper,
   View_ProfilePicture,
   Image_ProfilePicture,
   View_NumberOfFavs,
   Text_Favs,
-  Text_Number
+  Text_Number,
+  View_FavoriteBarista,
+  Text_DefaultTitle,
+  Text_DefaultSubText
 }

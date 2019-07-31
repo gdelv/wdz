@@ -6,7 +6,10 @@ import {
   Image_ProfilePicture,
   View_NumberOfFavs,
   Text_Favs,
-  Text_Number
+  Text_Number,
+  View_FavoriteBarista,
+  Text_DefaultTitle,
+  Text_DefaultSubText
 } from './styled'
 import { TopBar, NavBar } from '../../../common'
 import iconGear from '../../../assets/img/iconGear.png'
@@ -17,15 +20,7 @@ const CustomerProfile = () => {
     return <Image source={iconGear} />
   }
   renderProfilePicture = () => {
-    return (
-      <Image
-        source={profilePicture}
-        style={{
-          height: '100%',
-          width: '100%'
-        }}
-      />
-    )
+    return <Image_ProfilePicture source={profilePicture} />
   }
   return (
     <React.Fragment>

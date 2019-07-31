@@ -26,15 +26,15 @@ const RouterComponent = () => {
           <Scene key='Notes_Barista' component={Notes_Barista} hideNavBar />
         </Scene>
         <Scene key='Customer_Flow' hideNavBar initial>
-          <Scene key='CustomerProfile' component={CustomerProfile} hideNavBar />
-          <Scene key='CustomerNotes' component={CustomerNotes} hideNavBar />
-          <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
           <Scene
-            key='CustomerSearch'
-            component={CustomerSearch}
+            key='CustomerProfile'
+            component={CustomerProfile}
             hideNavBar
             initial
           />
+          <Scene key='CustomerNotes' component={CustomerNotes} hideNavBar />
+          <Scene key='CustomerHome' component={CustomerHome} hideNavBar />
+          <Scene key='CustomerSearch' component={CustomerSearch} hideNavBar />
         </Scene>
       </Scene>
     </Router>

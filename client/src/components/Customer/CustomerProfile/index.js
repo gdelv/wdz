@@ -1,6 +1,13 @@
 import React from 'react'
 import { ScrollView, Image } from 'react-native'
-import { Wrapper, View_ProfilePicture, Image_ProfilePicture } from './styled'
+import {
+  Wrapper,
+  View_ProfilePicture,
+  Image_ProfilePicture,
+  View_NumberOfFavs,
+  Text_Favs,
+  Text_Number
+} from './styled'
 import { TopBar, NavBar } from '../../../common'
 import iconGear from '../../../assets/img/iconGear.png'
 import profilePicture from '../../../assets/img/profilePicture.jpeg'
@@ -23,10 +30,12 @@ const CustomerProfile = () => {
   return (
     <React.Fragment>
       <ScrollView>
-        <TopBar Title='John Smith' Left={renderGearIcon()} />
+        <TopBar Title='Jane Smith' Left={renderGearIcon()} />
         <View_ProfilePicture>{renderProfilePicture()}</View_ProfilePicture>
-        {/* PROFILE PICTURE SECTION */}
-        {/* Number of FAVS */}
+        <View_NumberOfFavs>
+          <Text_Number>54</Text_Number>
+          <Text_Favs>Faves</Text_Favs>
+        </View_NumberOfFavs>
         {/* EMPTY CANVAS SECTION */}
         {/* Followed by added favorite baristas */}
       </ScrollView>

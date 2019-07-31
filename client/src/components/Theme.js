@@ -8,6 +8,7 @@ const theme = {
   WHITE: 'rgb(255, 255, 255)',
   GREY: 'rgb(182, 182, 182)',
   GREY_LINE: 'rgb(195, 195, 195)',
+  DARK_GREY: 'rgb(77, 77, 77)',
   OFF_WHITE: 'rgb(247, 247, 247)',
   SHADE: 'rgba(0, 0, 0, 0.3)',
   POPPINS_LIGHT: 'Poppins-Light',

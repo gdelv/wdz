@@ -5,8 +5,7 @@ const Wrapper = styled.View`
   background-color: cornflowerblue;
 `
 const View_ProfilePicture = styled.View`
-  height: 200px;
-  /* background-color: seagreen; */
+  max-height: 150px;
 `
 const Image_ProfilePicture = styled.Image`
   height: 100%;
@@ -36,6 +35,7 @@ const Text_Number = styled.Text`
 const View_FavoriteBarista = styled.View`
   padding-right: 5%;
   padding-left: 5%;
+  padding-top: 20%;
 `
 const Text_DefaultTitle = styled.Text`
   font-family: ${props => props.theme.POPPINS_BOLD};

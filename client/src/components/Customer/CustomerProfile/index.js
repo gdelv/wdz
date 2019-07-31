@@ -7,12 +7,19 @@ import {
   View_NumberOfFavs,
   Text_Favs,
   Text_Number,
-  View_FavoriteBarista,
+  View_Default,
   Text_DefaultTitle,
-  Text_DefaultSubText
+  Text_DefaultSubText,
+  View_Barista,
+  Image_Barista,
+  Text_BaristaName,
+  Text_BaristaCafe,
+  TouchableOpacity_Faved,
+  Text_Faved
 } from './styled'
 import { TopBar, NavBar } from '../../../common'
 import iconGear from '../../../assets/img/iconGear.png'
+import baristaFemale from '../../../assets/img/developmentPlaceholders/barista-female.jpeg'
 import profilePicture from '../../../assets/img/profilePicture.jpeg'
 
 const CustomerProfile = () => {
@@ -31,12 +38,9 @@ const CustomerProfile = () => {
           <Text_Number>{null}</Text_Number>
           <Text_Favs>No Faves Yet.</Text_Favs>
         </View_NumberOfFavs>
-        <View_FavoriteBarista>
-          <Text_DefaultTitle>You're all set!</Text_DefaultTitle>
-          <Text_DefaultSubText>
-            Go favorite your baristas and they will show up here!
-          </Text_DefaultSubText>
-        </View_FavoriteBarista>
+        <View_Barista>
+          <Image_Barista source={baristaFemale} />
+        </View_Barista>
       </ScrollView>
       <NavBar />
     </React.Fragment>
@@ -44,3 +48,11 @@ const CustomerProfile = () => {
 }
 
 export default CustomerProfile
+{
+  /* <View_Default>
+  <Text_DefaultTitle>You're all set!</Text_DefaultTitle>
+  <Text_DefaultSubText>
+    Go favorite your baristas and they will show up here!
+  </Text_DefaultSubText>
+</View_Default> */
+}

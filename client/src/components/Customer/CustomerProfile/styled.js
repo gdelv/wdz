@@ -32,7 +32,7 @@ const Text_Number = styled.Text`
   padding-right: 1.5px;
 `
 
-const View_FavoriteBarista = styled.View`
+const View_Default = styled.View`
   padding-right: 5%;
   padding-left: 5%;
   padding-top: 20%;
@@ -46,7 +46,17 @@ const Text_DefaultSubText = styled.Text`
   text-align: center;
   font-size: 18px;
 `
-
+const View_Barista = styled.View``
+const Image_Barista = styled.Image`
+  height: 70px;
+  width: 70px;
+  border-radius: 70px;
+  border: 5px solid ${props => props.theme.GREEN};
+`
+const Text_BaristaName = styled.Text``
+const Text_BaristaCafe = styled.Text``
+const TouchableOpacity_Faved = styled.TouchableOpacity``
+const Text_Faved = styled.Text``
 export {
   Wrapper,
   View_ProfilePicture,
@@ -54,7 +64,13 @@ export {
   View_NumberOfFavs,
   Text_Favs,
   Text_Number,
-  View_FavoriteBarista,
+  View_Default,
   Text_DefaultTitle,
-  Text_DefaultSubText
+  Text_DefaultSubText,
+  View_Barista,
+  Image_Barista,
+  Text_BaristaName,
+  Text_BaristaCafe,
+  TouchableOpacity_Faved,
+  Text_Faved
 }
